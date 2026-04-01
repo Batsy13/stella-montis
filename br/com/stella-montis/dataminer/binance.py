@@ -1,8 +1,6 @@
-import asyncio
-
 from playwright.async_api import async_playwright
 
-from servicies.binance_service import *
+from servicies.binance import *
 
 # Estado global dos dados
 MARKET_DATA = {}

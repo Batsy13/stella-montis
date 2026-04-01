@@ -2,7 +2,7 @@ import asyncio
 
 from playwright.async_api import async_playwright
 
-from servicies.google_finance_service import *
+from servicies.google_finance import *
 
 # Dicionário Global Único
 MARKET_DATA = {}

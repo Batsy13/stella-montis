@@ -3,7 +3,7 @@ from datetime import datetime
 
 from playwright.async_api import async_playwright
 
-from servicies.tradingview_service import *
+from servicies.tradingview import *
 
 # Estado global dos dados
 MAKET_DATA = {}
