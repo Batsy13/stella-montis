@@ -1,4 +1,4 @@
-# stella-montis
+# Stella-Montis
 
 <a id="readme-top"></a>
 
@@ -94,12 +94,14 @@ O projeto foi estruturado para cumprir os seguintes requisitos pontuáveis:
 
 Segue o grupo responsável pelo desenvolvimento do projeto.
 
-* **Amanda Ferreira Dahm - 2422130022**
-* **Felipe Ferreira Lucas - 2312130021**
-* **Gabriel Diogo Oliveira - 2222082011**
-* **Gabriel Rodrigues de Oliveira - 2312130033**
-* **João Marcos Santos e Carvalho - 2312130063**
-* **Pedro Costa Ferreira - 2312130138**
+| Nome | Matrícula |
+|------|--------|
+| Amanda Ferreira Dahm | 2422130022 |
+| Felipe Ferreira Lucas | 2312130021 |
+| Gabriel Diogo Oliveira | 2222082011 |
+| Gabriel Rodrigues de Oliveira | 2312130033 |
+| João Marcos Santos e Carvalho | 2312130063 |
+| Pedro Costa Ferreira | 2312130138 |
 
 <p align="right">(<a href="#readme-top">voltar ao início</a>)</p>
 
