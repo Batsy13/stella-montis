@@ -1,5 +1,8 @@
+<div align="center">
+  
 # Stella-Montis
 
+</div>
 <a id="readme-top"></a>
 
 <br />
