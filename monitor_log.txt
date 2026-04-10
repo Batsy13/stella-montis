@@ -1,0 +1,9 @@
+2026-04-09 21:14:01 | INFO | Application started
+2026-04-09 21:14:47 | INFO | Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:47 | INFO | Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:51 | INFO | Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:51 | INFO | Initial value: 0.7%
+2026-04-09 21:15:01 | WARNING | [2026-04-09 21:15:01] Value changed | Old: 0.7% | New: 8.5%
+2026-04-09 21:15:11 | WARNING | [2026-04-09 21:15:11] Value changed | Old: 8.5% | New: 0.5 MB/s
+2026-04-09 21:15:21 | WARNING | [2026-04-09 21:15:21] Value changed | Old: 0.5 MB/s | New: 82.9 MB
+2026-04-09 21:15:31 | ERROR | Monitoring error: Locator.is_visible: Target page, context or browser has been closed

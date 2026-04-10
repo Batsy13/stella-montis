@@ -5,8 +5,18 @@ from playwright.async_api import async_playwright
 import uvicorn
 import re
 from monitor import monitor_price
+from logger_config import setup_logger
+from loguru import logger
+
+import asyncio
+
+if hasattr(asyncio, "WindowsProactorEventLoopPolicy"):
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 app = FastAPI()
+
+setup_logger()
+logger.info("Application started")
 
 class MonitorRequest(BaseModel):
     url: str
@@ -14,6 +24,7 @@ class MonitorRequest(BaseModel):
 
 @app.post("/start")
 async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks):
+    logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
     background_tasks.add_task(monitor_price, req.url, req.xpath)
     return {"message": "Monitoring started"}
 

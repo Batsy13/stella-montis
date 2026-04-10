@@ -1,9 +1,14 @@
 import asyncio
 from datetime import datetime
 from playwright.async_api import async_playwright
+from loguru import logger
 
 async def monitor_price(url: str, selector: str, interval: int = 10):
+    
+    logger.info(f"Starting monitoring | URL: {url} | Selector: {selector}")
+
     if not url.startswith("http"):
+        logger.error("Invalid URL provided")
         return
 
     async with async_playwright() as p:
@@ -23,13 +28,13 @@ async def monitor_price(url: str, selector: str, interval: int = 10):
                     if current_value:
                         if last_value is None:
                             last_value = current_value
-                            print(f"Position: {selector}")
-                            print(f"Initial: {current_value}")
+                            logger.info(f"Selector used: {selector}")
+                            logger.info(f"Initial value: {current_value}")
                         elif current_value != last_value:
                             now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                            print(f"[{now}] Changed! Old: {last_value} | New: {current_value}")
+                            logger.warning(f"[{now}] Value changed | Old: {last_value} | New: {current_value}")
                             last_value = current_value
                 
                 await asyncio.sleep(interval)
         except Exception as e:
-            print(e)
+            logger.error(f"Monitoring error: {str(e)}")

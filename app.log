@@ -1,0 +1,56 @@
+2026-04-09 20:18:21.490 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:19:01.242 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:19:17.201 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:19:43.965 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:19:50.075 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:19:55.792 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:20:10.913 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:20:23.215 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:22:10.188 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:22:12.730 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:22:14.248 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:27:47.391 | INFO     | main:<module>:14 - Application started
+2026-04-09 20:32:53.307 | INFO     | main:<module>:19 - Application started
+2026-04-09 20:34:39.676 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://www.binance.com/pt-BR/price/bitcoin | Selector: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:34:39.677 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://www.binance.com/pt-BR/price/bitcoin | Selector: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:34:51.314 | INFO     | monitor:monitor_price:31 - Selector used: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:34:51.314 | INFO     | monitor:monitor_price:32 - Initial value: 1 Bitcoin é igual a US$ 71.850,55 USD
+2026-04-09 20:35:01.327 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-09 20:35:24.386 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://www.binance.com/pt-BR/price/bitcoin | Selector: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:35:24.386 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://www.binance.com/pt-BR/price/bitcoin | Selector: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:35:35.951 | INFO     | monitor:monitor_price:31 - Selector used: #__APP > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1) > span:nth-of-type(1)
+2026-04-09 20:35:35.951 | INFO     | monitor:monitor_price:32 - Initial value: 1 Bitcoin é igual a US$ 71.637,81 USD
+2026-04-09 20:38:26.287 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-09 20:40:39.840 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(3)
+2026-04-09 20:40:39.841 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(3)
+2026-04-09 20:40:44.663 | INFO     | monitor:monitor_price:31 - Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(3)
+2026-04-09 20:40:44.663 | INFO     | monitor:monitor_price:32 - Initial value: 0.5 Mbps
+2026-04-09 20:41:44.869 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:41:44] Value changed | Old: 0.5 Mbps | New: 2.7%
+2026-04-09 20:42:04.934 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:42:04] Value changed | Old: 2.7% | New: 1%
+2026-04-09 20:42:55.055 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:42:55] Value changed | Old: 1% | New: 9.9 Mbps
+2026-04-09 20:43:35.098 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:43:35] Value changed | Old: 9.9 Mbps | New: 2%
+2026-04-09 20:44:05.162 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:44:05] Value changed | Old: 2% | New: 5 Mbps
+2026-04-09 20:44:35.217 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:44:35] Value changed | Old: 5 Mbps | New: 0.6 MB/s
+2026-04-09 20:44:55.243 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-09 20:45:11.087 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:45:11.088 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:45:15.933 | INFO     | monitor:monitor_price:31 - Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:45:15.933 | INFO     | monitor:monitor_price:32 - Initial value: 0 Mbps
+2026-04-09 20:45:35.986 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:45:35] Value changed | Old: 0 Mbps | New: 27 MB
+2026-04-09 20:45:56.013 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:45:56] Value changed | Old: 27 MB | New: 82.8 MB
+2026-04-09 20:46:06.021 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-09 20:53:39.104 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(1)
+2026-04-09 20:53:39.105 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(1)
+2026-04-09 20:53:43.990 | INFO     | monitor:monitor_price:31 - Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(1)
+2026-04-09 20:53:43.991 | INFO     | monitor:monitor_price:32 - Initial value: Internet Explorer
+2026-04-09 20:54:24.051 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:54:24] Value changed | Old: Internet Explorer | New: Chrome
+2026-04-09 20:54:44.118 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:54:44] Value changed | Old: Chrome | New: System
+2026-04-09 20:54:54.113 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-09 20:55:05.129 | INFO     | main:start_monitoring:27 - Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:55:05.130 | INFO     | monitor:monitor_price:8 - Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:55:09.903 | INFO     | monitor:monitor_price:31 - Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(3) > td:nth-of-type(2)
+2026-04-09 20:55:09.904 | INFO     | monitor:monitor_price:32 - Initial value: 7.1 MB
+2026-04-09 20:55:19.918 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:55:19] Value changed | Old: 7.1 MB | New: 6.6 Mbps
+2026-04-09 20:55:29.949 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:55:29] Value changed | Old: 6.6 Mbps | New: 78.3 MB
+2026-04-09 20:55:39.970 | WARNING  | monitor:monitor_price:35 - [2026-04-09 20:55:39] Value changed | Old: 78.3 MB | New: 0.8%
+2026-04-09 20:55:49.983 | ERROR    | monitor:monitor_price:40 - Monitoring error: Locator.is_visible: Target page, context or browser has been closed
