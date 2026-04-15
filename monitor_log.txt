@@ -1,0 +1,104 @@
+2026-04-09 21:14:01 | INFO | Application started
+2026-04-09 21:14:47 | INFO | Monitoring requested | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:47 | INFO | Starting monitoring | URL: https://practice.expandtesting.com/dynamic-table | Selector: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:51 | INFO | Selector used: #core > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(3)
+2026-04-09 21:14:51 | INFO | Initial value: 0.7%
+2026-04-09 21:15:01 | WARNING | [2026-04-09 21:15:01] Value changed | Old: 0.7% | New: 8.5%
+2026-04-09 21:15:11 | WARNING | [2026-04-09 21:15:11] Value changed | Old: 8.5% | New: 0.5 MB/s
+2026-04-09 21:15:21 | WARNING | [2026-04-09 21:15:21] Value changed | Old: 0.5 MB/s | New: 82.9 MB
+2026-04-09 21:15:31 | ERROR | Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-14 23:17:34 | INFO | Application started
+2026-04-14 23:30:34 | INFO | Application started
+2026-04-14 23:38:30 | INFO | Monitoring requested | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:38:30 | INFO | Starting monitoring | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:38:40 | INFO | Selector used: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:38:40 | INFO | Initial value: $74,228.31
+2026-04-14 23:38:51 | WARNING | [2026-04-14 23:38:51] Value changed | Old: $74,228.31 | New: $74,228.08
+2026-04-14 23:39:01 | WARNING | [2026-04-14 23:39:01] Value changed | Old: $74,228.08 | New: $74,228.83
+2026-04-14 23:39:11 | WARNING | [2026-04-14 23:39:11] Value changed | Old: $74,228.83 | New: $74,231.83
+2026-04-14 23:39:21 | WARNING | [2026-04-14 23:39:21] Value changed | Old: $74,231.83 | New: $74,231.58
+2026-04-14 23:39:31 | WARNING | [2026-04-14 23:39:31] Value changed | Old: $74,231.58 | New: $74,247.48
+2026-04-14 23:39:41 | WARNING | [2026-04-14 23:39:41] Value changed | Old: $74,247.48 | New: $74,242.98
+2026-04-14 23:39:51 | WARNING | [2026-04-14 23:39:51] Value changed | Old: $74,242.98 | New: $74,238.43
+2026-04-14 23:40:01 | WARNING | [2026-04-14 23:40:01] Value changed | Old: $74,238.43 | New: $74,258.96
+2026-04-14 23:40:11 | WARNING | [2026-04-14 23:40:11] Value changed | Old: $74,258.96 | New: $74,234.39
+2026-04-14 23:40:21 | WARNING | [2026-04-14 23:40:21] Value changed | Old: $74,234.39 | New: $74,231.53
+2026-04-14 23:40:31 | WARNING | [2026-04-14 23:40:31] Value changed | Old: $74,231.53 | New: $74,223.03
+2026-04-14 23:40:41 | WARNING | [2026-04-14 23:40:41] Value changed | Old: $74,223.03 | New: $74,237.86
+2026-04-14 23:40:51 | WARNING | [2026-04-14 23:40:51] Value changed | Old: $74,237.86 | New: $74,254.29
+2026-04-14 23:41:01 | WARNING | [2026-04-14 23:41:01] Value changed | Old: $74,254.29 | New: $74,252.50
+2026-04-14 23:41:11 | WARNING | [2026-04-14 23:41:11] Value changed | Old: $74,252.50 | New: $74,251.77
+2026-04-14 23:41:22 | WARNING | [2026-04-14 23:41:22] Value changed | Old: $74,251.77 | New: $74,270.14
+2026-04-14 23:41:32 | WARNING | [2026-04-14 23:41:32] Value changed | Old: $74,270.14 | New: $74,266.81
+2026-04-14 23:41:42 | WARNING | [2026-04-14 23:41:42] Value changed | Old: $74,266.81 | New: $74,259.41
+2026-04-14 23:41:52 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-14 23:44:50 | INFO | Application started
+2026-04-14 23:44:59 | INFO | Monitoring requested | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:44:59 | INFO | Starting monitoring | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:45:08 | INFO | Selector used: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-14 23:45:08 | INFO | Initial value: $74,233.35
+2026-04-14 23:45:18 | WARNING | [2026-04-14 23:45:18] Value changed | Old: $74,233.35 | New: $74,295.36
+2026-04-14 23:45:28 | WARNING | [2026-04-14 23:45:28] Value changed | Old: $74,295.36 | New: $74,284.33
+2026-04-14 23:45:38 | WARNING | [2026-04-14 23:45:38] Value changed | Old: $74,284.33 | New: $74,287.46
+2026-04-14 23:45:48 | WARNING | [2026-04-14 23:45:48] Value changed | Old: $74,287.46 | New: $74,287.54
+2026-04-14 23:45:58 | WARNING | [2026-04-14 23:45:58] Value changed | Old: $74,287.54 | New: $74,287.31
+2026-04-14 23:46:08 | WARNING | [2026-04-14 23:46:08] Value changed | Old: $74,287.31 | New: $74,286.04
+2026-04-14 23:46:19 | WARNING | [2026-04-14 23:46:19] Value changed | Old: $74,286.04 | New: $74,287.05
+2026-04-14 23:46:29 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 10:40:52 | INFO | Application started
+2026-04-15 10:41:47 | INFO | Monitoring requested | URL: https://www.infomoney.com.br/ | Selector: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-15 10:41:47 | INFO | Starting monitoring | URL: https://www.infomoney.com.br/ | Selector: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-15 10:41:50 | INFO | Selector used: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-15 10:41:50 | INFO | Initial value: R$ 21,52
+2026-04-15 10:42:44 | INFO | Monitoring requested | URL: https://br.investing.com/crypto/bitcoin | Selector: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-15 10:42:44 | INFO | Starting monitoring | URL: https://br.investing.com/crypto/bitcoin | Selector: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-15 10:43:13 | ERROR | Monitoring error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://br.investing.com/crypto/bitcoin", waiting until "load"
+
+2026-04-15 10:43:27 | INFO | Monitoring requested | URL: https://br.investing.com/crypto/bitcoin | Selector: #__next > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)
+2026-04-15 10:43:27 | INFO | Starting monitoring | URL: https://br.investing.com/crypto/bitcoin | Selector: #__next > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)
+2026-04-15 10:43:57 | ERROR | Monitoring error: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://br.investing.com/crypto/bitcoin", waiting until "load"
+
+2026-04-15 10:44:14 | ERROR | Monitoring error: Locator.is_visible: Target page, context or browser has been closed
+2026-04-15 10:45:55 | INFO | Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 10:45:55 | INFO | Starting monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 10:45:59 | INFO | Selector used: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 10:45:59 | INFO | Initial value: 73.984
+2026-04-15 10:46:09 | WARNING | [2026-04-15 10:46:09] Value changed | Old: 73.984 | New: 73.967
+2026-04-15 10:46:19 | WARNING | [2026-04-15 10:46:19] Value changed | Old: 73.967 | New: 74.002
+2026-04-15 10:46:28 | WARNING | [2026-04-15 10:46:28] Value changed | Old: 74.002 | New: 73.989
+2026-04-15 10:46:38 | WARNING | [2026-04-15 10:46:38] Value changed | Old: 73.989 | New: 73.966
+2026-04-15 10:46:48 | WARNING | [2026-04-15 10:46:48] Value changed | Old: 73.966 | New: 73.925
+2026-04-15 10:46:58 | WARNING | [2026-04-15 10:46:58] Value changed | Old: 73.925 | New: 73.971
+2026-04-15 10:47:08 | WARNING | [2026-04-15 10:47:08] Value changed | Old: 73.971 | New: 73.957
+2026-04-15 10:47:16 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 11:35:37 | INFO | Application started
+2026-04-15 11:36:23 | INFO | Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:36:23 | INFO | Starting monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:36:27 | INFO | Selector used: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:36:27 | INFO | Initial value: 74.295
+2026-04-15 11:36:37 | WARNING | [2026-04-15 11:36:37] Value changed | Old: 74.295 | New: 74.296
+2026-04-15 11:36:45 | WARNING | [2026-04-15 11:36:45] Value changed | Old: 74.296 | New: 74.323
+2026-04-15 11:36:55 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 11:37:11 | INFO | Application started
+2026-04-15 11:37:14 | INFO | Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:37:14 | INFO | Starting monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:37:17 | INFO | Selector used: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:37:17 | INFO | Initial value: 74.292
+2026-04-15 11:37:27 | WARNING | [2026-04-15 11:37:27] Value changed | Old: 74.292 | New: 74.289
+2026-04-15 11:37:37 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 11:38:57 | INFO | Application started
+2026-04-15 11:39:02 | INFO | Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:39:02 | INFO | Starting monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:39:07 | INFO | Selector used: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 11:39:07 | INFO | Initial value: 74.097
+2026-04-15 11:39:17 | WARNING | [2026-04-15 11:39:17] Value changed | Old: 74.097 | New: 74.055
+2026-04-15 11:39:25 | WARNING | [2026-04-15 11:39:25] Value changed | Old: 74.055 | New: 74.078
+2026-04-15 11:39:35 | WARNING | [2026-04-15 11:39:35] Value changed | Old: 74.078 | New: 74.080
+2026-04-15 11:39:45 | WARNING | [2026-04-15 11:39:45] Value changed | Old: 74.080 | New: 74.025
+2026-04-15 11:39:53 | WARNING | [2026-04-15 11:39:53] Value changed | Old: 74.025 | New: 74.035
+2026-04-15 11:40:03 | WARNING | [2026-04-15 11:40:03] Value changed | Old: 74.035 | New: 74.005
+2026-04-15 11:40:13 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stella Montis</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        iframe { width: 100%; height: 70vh; border: 1px solid #ccc; margin-top: 15px; }
+        .controls { margin-bottom: 15px; }
+        input { width: 400px; padding: 5px; }
+        button { padding: 5px 15px; border-radius: 5px; border: none }
+        #loading { display: none; color: #d9534f; font-weight: bold; margin-bottom: 10px; }
+        #startBtn { display: none; background-color: #4CAF50; color: white; border: none; cursor: pointer; padding: 5px 15px; border-radius: 5px;  }
+    </style>
+</head>
+<body>
+    <h1>Stella Montis</h1>
+    
+    <div class="controls">
+        <input type="text" id="urlInput" placeholder="https://example.com">
+        <input type="email" id="emailInput" placeholder="Seu e-mail">
+        <button onclick="loadUrl()">Load Page</button>
+        <button id="startBtn" onclick="startTask()">Start Monitoring</button>
+    </div>
+    
+    <div id="loading">Loading page, please wait...</div>
+    <p>Target XPath: <strong id="xpathDisplay">None</strong></p>
+    
+    <iframe id="proxyFrame" sandbox="allow-scripts allow-same-origin"></iframe>
+
+    <script>
+        let currentXpath = "";
+        const proxyFrame = document.getElementById('proxyFrame');
+
+        proxyFrame.onload = function() {
+            document.getElementById('loading').style.display = 'none';
+        };
+
+        function loadUrl() {
+            const url = document.getElementById('urlInput').value;
+            if (url) {
+                document.getElementById('loading').style.display = 'block';
+                document.getElementById('startBtn').style.display = 'none';
+                proxyFrame.src = `/proxy?url=${encodeURIComponent(url)}`;
+            }
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.xpath) {
+                currentXpath = event.data.xpath;
+                document.getElementById('xpathDisplay').innerText = currentXpath;
+                document.getElementById('startBtn').style.display = 'inline-block';
+            }
+        });
+
+        function startTask() {
+            const url = document.getElementById('urlInput').value;
+            const email = document.getElementById('emailInput').value;
+
+            if (!email) {
+                alert("Digite um e-mail!");
+                return;
+            }
+            
+            fetch('/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url, xpath: currentXpath, email: email  })
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
