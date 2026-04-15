@@ -18,6 +18,7 @@
     
     <div class="controls">
         <input type="text" id="urlInput" placeholder="https://example.com">
+        <input type="email" id="emailInput" placeholder="Seu e-mail">
         <button onclick="loadUrl()">Load Page</button>
         <button id="startBtn" onclick="startTask()">Start Monitoring</button>
     </div>
@@ -54,10 +55,17 @@
 
         function startTask() {
             const url = document.getElementById('urlInput').value;
+            const email = document.getElementById('emailInput').value;
+
+            if (!email) {
+                alert("Digite um e-mail!");
+                return;
+            }
+            
             fetch('/start', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: url, xpath: currentXpath })
+                body: JSON.stringify({ url: url, xpath: currentXpath, email: email  })
             })
             .then(response => response.json())
             .then(data => alert(data.message))

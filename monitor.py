@@ -1,9 +1,10 @@
 import asyncio
 from datetime import datetime
+from email_service import send_email
 from playwright.async_api import async_playwright
 from loguru import logger
 
-async def monitor_price(url: str, selector: str, interval: int = 10):
+async def monitor_price(url: str, selector: str, email: str, interval: int = 10):
     
     logger.info(f"Starting monitoring | URL: {url} | Selector: {selector}")
 
@@ -33,6 +34,22 @@ async def monitor_price(url: str, selector: str, interval: int = 10):
                         elif current_value != last_value:
                             now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                             logger.warning(f"[{now}] Value changed | Old: {last_value} | New: {current_value}")
+
+                            subject = "Valor alterado!"
+                            message = f"""
+                            O valor monitorado foi alterado.
+
+                            URL: {url}
+                            Data: {now}
+
+                            Valor antigo: {last_value}
+                            Novo valor: {current_value}
+                            """
+
+                            asyncio.create_task(
+                                asyncio.to_thread(send_email, email, subject, message)
+                            )
+
                             last_value = current_value
                 
                 await asyncio.sleep(interval)

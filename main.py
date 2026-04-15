@@ -21,11 +21,12 @@ logger.info("Application started")
 class MonitorRequest(BaseModel):
     url: str
     xpath: str
+    email: str
 
 @app.post("/start")
 async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks):
     logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
-    background_tasks.add_task(monitor_price, req.url, req.xpath)
+    background_tasks.add_task(monitor_price, req.url, req.xpath, req.email)
     return {"message": "Monitoring started"}
 
 @app.get("/", response_class=HTMLResponse)
