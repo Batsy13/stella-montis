@@ -4,8 +4,9 @@ from pydantic import BaseModel
 from playwright.async_api import async_playwright
 import uvicorn
 import re
-from monitor import monitor_price
-from logger_config import setup_logger
+from services.monitor_service import monitor_price
+from pathlib import Path
+from core.logger_config import setup_logger
 from loguru import logger
 
 import asyncio
@@ -14,6 +15,7 @@ if hasattr(asyncio, "WindowsProactorEventLoopPolicy"):
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 app = FastAPI()
+BASE_DIR = Path(__file__).resolve().parent
 
 setup_logger()
 logger.info("Application started")
@@ -31,7 +33,8 @@ async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTask
 
 @app.get("/", response_class=HTMLResponse)
 async def index():
-    with open("index.html", "r") as f:
+    template_path = BASE_DIR / "templates" / "index.html"
+    with open(template_path, "r", encoding="utf-8") as f:
         return f.read()
 
 @app.get("/proxy", response_class=HTMLResponse)
@@ -43,7 +46,7 @@ async def proxy(url: str):
         )
         page = await context.new_page()
         try:
-            await page.goto(url, wait_until="load", timeout=15000)
+            await page.goto(url, wait_until="load", timeout=60000)
             await page.wait_for_timeout(5000)
         except:
             pass

@@ -102,3 +102,52 @@ Call log:
 2026-04-15 11:39:53 | WARNING | [2026-04-15 11:39:53] Value changed | Old: 74.025 | New: 74.035
 2026-04-15 11:40:03 | WARNING | [2026-04-15 11:40:03] Value changed | Old: 74.035 | New: 74.005
 2026-04-15 11:40:13 | ERROR | Monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 15:44:58 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 15:44:58 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 15:45:05 | INFO     | __main__:start_monitoring:28 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 15:45:05 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 15:45:09 | INFO     | services.monitor_service:monitor_price:29 - [2026-04-15 15:45:09] Value changed | Old: None | New: 74.334
+2026-04-15 15:45:19 | INFO     | services.monitor_service:monitor_price:29 - [2026-04-15 15:45:19] Value changed | Old: 74.334 | New: 74.352
+2026-04-15 15:45:29 | ERROR    | services.monitor_service:monitor_price:59 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 15:45:29 | INFO     | services.monitor_service:monitor_price:63 - Browser already disconnected.
+2026-04-15 15:45:29 | INFO     | services.monitor_service:monitor_price:68 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 15:55:17 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 15:55:17 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 15:55:30 | INFO     | __main__:start_monitoring:28 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 15:55:30 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 15:55:33 | INFO     | services.monitor_service:monitor_price:37 - Initial value: 74.371
+2026-04-15 15:55:42 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:55:42] Value changed | Old: 74.371 | New: 74.384
+2026-04-15 15:55:52 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:55:52] Value changed | Old: 74.384 | New: 74.397
+2026-04-15 15:56:02 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:02] Value changed | Old: 74.397 | New: 74.383
+2026-04-15 15:56:10 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:10] Value changed | Old: 74.383 | New: 74.368
+2026-04-15 15:56:30 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:30] Value changed | Old: 74.368 | New: 74.369
+2026-04-15 15:56:38 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:38] Value changed | Old: 74.369 | New: 74.373
+2026-04-15 15:56:48 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:48] Value changed | Old: 74.373 | New: 74.383
+2026-04-15 15:56:58 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:56:58] Value changed | Old: 74.383 | New: 74.396
+2026-04-15 15:57:16 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:57:16] Value changed | Old: 74.396 | New: 74.395
+2026-04-15 15:57:36 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:57:36] Value changed | Old: 74.395 | New: 74.406
+2026-04-15 15:57:45 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 15:57:45] Value changed | Old: 74.406 | New: 74.404
+2026-04-15 15:57:55 | ERROR    | services.monitor_service:monitor_price:68 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 15:57:58 | INFO     | services.monitor_service:monitor_price:81 - Browser already disconnected.
+2026-04-15 15:57:58 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 23:19:41 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:19:41 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 23:20:25 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:20:25 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 23:20:50 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:20:50 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 23:24:21 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:24:21 | INFO     | __main__:<module>:19 - Application started
+2026-04-15 23:26:16 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:26:16 | INFO     | __main__:<module>:21 - Application started
+2026-04-15 23:27:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:27:59 | INFO     | __main__:<module>:21 - Application started
+2026-04-15 23:29:01 | INFO     | __main__:start_monitoring:30 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-15 23:29:01 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 23:29:05 | INFO     | services.monitor_service:monitor_price:37 - Initial value: 74.822
+2026-04-15 23:29:15 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-15 23:29:15] Value changed | Old: 74.822 | New: 8
+2026-04-15 23:29:25 | ERROR    | services.monitor_service:monitor_price:68 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-15 23:29:29 | INFO     | services.monitor_service:monitor_price:81 - Browser already disconnected.
+2026-04-15 23:29:29 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-15 23:34:43 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:34:43 | INFO     | __main__:<module>:21 - Application started
