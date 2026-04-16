@@ -151,3 +151,203 @@ Call log:
 2026-04-15 23:29:29 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
 2026-04-15 23:34:43 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
 2026-04-15 23:34:43 | INFO     | __main__:<module>:21 - Application started
+2026-04-15 23:49:30 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-15 23:49:30 | INFO     | __main__:<module>:21 - Application started
+2026-04-16 00:01:25 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:01:25 | INFO     | __main__:<module>:23 - Application started
+2026-04-16 00:01:30 | INFO     | __main__:xpath_websocket:34 - WebSocket conectado ao Frontend.
+2026-04-16 00:03:04 | INFO     | __main__:xpath_websocket:48 - WebSocket desconectado.
+2026-04-16 00:03:04 | INFO     | __main__:xpath_websocket:34 - WebSocket conectado ao Frontend.
+2026-04-16 00:03:08 | INFO     | __main__:xpath_websocket:43 - Iniciando captura ao vivo para: https://www.binance.com/pt-BR/trade/BTC_USDT?type=spot
+2026-04-16 00:05:24 | INFO     | __main__:xpath_websocket:48 - WebSocket desconectado.
+2026-04-16 00:05:26 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:06:35 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:13:51 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:13:52 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:13:52 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 00:13:52 | INFO     | main:startup_event:36 - Application started and ready for requests
+2026-04-16 00:13:54 | INFO     | main:xpath_websocket:60 - WebSocket: Cliente conectado ao painel.
+2026-04-16 00:14:04 | INFO     | main:xpath_websocket:69 - WebSocket: Iniciando Live Selector para https://www.binance.com/pt-BR/trade/BTC_USDT?type=spot
+2026-04-16 00:14:05 | INFO     | services.selector_service:open_live_selector:72 - Navegando para o alvo...
+2026-04-16 00:14:05 | INFO     | services.selector_service:open_live_selector:74 - Página carregada. Aguardando clique do usuário...
+2026-04-16 00:14:11 | SUCCESS  | services.selector_service:on_xpath_selected:18 - XPath capturado nativamente: #trd-basic-layout-container > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)
+2026-04-16 00:18:19 | INFO     | main:xpath_websocket:74 - WebSocket: Cliente desconectado.
+2026-04-16 11:02:11 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:04:08 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:04:09 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:04:09 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:04:09 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-16 11:04:25 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 11:04:59 | INFO     | main:xpath_websocket:68 - WebSocket: Iniciando Live Selector para https://www.infomoney.com.br/
+2026-04-16 11:05:01 | INFO     | services.selector_service:open_live_selector:64 - Navegando para o alvo...
+2026-04-16 11:05:00 | INFO     | services.selector_service:open_live_selector:66 - Página carregada. Aguardando clique do usuário...
+2026-04-16 11:05:08 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-16 11:05:28 | INFO     | main:start_monitoring:53 - Monitoring requested | URL: https://www.infomoney.com.br/ | Selector: html:nth-of-type(1) > body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3) > div:nth-of-type(1)
+2026-04-16 11:05:28 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://www.infomoney.com.br/
+2026-04-16 11:06:38 | INFO     | main:xpath_websocket:72 - WebSocket: Cliente desconectado.
+2026-04-16 11:08:18 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:08:18 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:08:18 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:08:18 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-16 11:08:20 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 11:08:44 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-16 11:08:45 | INFO     | services.selector_service:open_live_selector:64 - Navigating to the page
+2026-04-16 11:08:46 | INFO     | services.selector_service:open_live_selector:66 - Content Loaded. Waiting user's click
+2026-04-16 11:08:56 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-16 11:09:12 | INFO     | main:start_monitoring:53 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-16 11:09:12 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-16 11:09:16 | INFO     | services.monitor_service:monitor_price:37 - Initial value: 73.896
+2026-04-16 11:09:44 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-16 11:09:44] Value changed | Old: 73.896 | New: 73.878
+2026-04-16 11:09:54 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-16 11:09:54] Value changed | Old: 73.878 | New: 73.918
+2026-04-16 11:10:02 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-16 11:10:02] Value changed | Old: 73.918 | New: 73.960
+2026-04-16 11:10:12 | WARNING  | services.monitor_service:monitor_price:41 - [2026-04-16 11:10:12] Value changed | Old: 73.960 | New: 73.942
+2026-04-16 11:10:13 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 11:10:22 | ERROR    | services.monitor_service:monitor_price:68 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-16 11:10:26 | INFO     | services.monitor_service:monitor_price:81 - Browser already disconnected.
+2026-04-16 11:10:26 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-16 11:10:26 | INFO     | main:lifespan:37 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:17:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:17:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:17:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:17:59 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-16 11:18:37 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-16 11:20:40 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-16 11:20:40 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:20:41 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:20:41 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-16 11:20:44 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 11:20:46 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 11:20:47 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:20:56 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:20:56 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:20:56 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-16 11:20:56 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:20:59 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:20:59 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:21:04 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:21:23 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:21:23 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:21:23 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:21:23 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-16 11:21:27 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:21:29 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:21:29 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:22:10 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:22:10 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:22:13 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:22:13 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:24:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:24:39 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:24:39 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:24:39 | INFO     | main:lifespan:37 - Application started and ready for requests
+2026-04-16 11:24:42 | INFO     | main:xpath_websocket:64 - WebSocket: Client conected with the board.
+2026-04-16 11:24:42 | INFO     | main:xpath_websocket:76 - WebSocket: Client disconected.
+2026-04-16 11:24:42 | INFO     | main:lifespan:41 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:24:43 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:24:44 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:24:45 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:24:45 | INFO     | main:lifespan:37 - Application started and ready for requests
+2026-04-16 11:24:45 | INFO     | main:xpath_websocket:64 - WebSocket: Client conected with the board.
+2026-04-16 11:25:02 | INFO     | main:xpath_websocket:76 - WebSocket: Client disconected.
+2026-04-16 11:25:02 | INFO     | main:lifespan:41 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:25:02 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:25:03 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:25:03 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-16 11:25:06 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:25:14 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:25:14 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:17 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:17 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:18 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:19 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:26 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:27 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:32 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:32 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:39 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:27:40 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:29:51 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:29:51 | INFO     | main:xpath_websocket:63 - WebSocket: Client conected with the board.
+2026-04-16 11:30:25 | INFO     | main:xpath_websocket:75 - WebSocket: Client disconected.
+2026-04-16 11:30:25 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:30:26 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:26 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:26 | INFO     | main:lifespan:35 - Application started and ready for requests
+2026-04-16 11:30:26 | INFO     | main:lifespan:39 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:30:27 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:27 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:27 | INFO     | main:lifespan:34 - Application started and ready for requests
+2026-04-16 11:30:28 | INFO     | main:lifespan:38 - Application is shutting down. Cleaning up resources...
+2026-04-16 11:30:28 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:28 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-16 11:30:28 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-16 11:30:28 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 11:30:29 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 11:30:29 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 15:25:28 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://statusinvest.com.br/indices/ibovespa
+2026-04-16 15:25:31 | INFO     | services.selector_service:open_live_selector:64 - Navigating to the page
+2026-04-16 15:25:32 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #treemap-result > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button:nth-of-type(3)
+2026-04-16 15:25:32 | INFO     | services.selector_service:open_live_selector:66 - Content Loaded. Waiting user's click
+2026-04-16 15:25:32 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #main-2 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)
+2026-04-16 15:25:52 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #main-2 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)
+2026-04-16 15:26:16 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:17 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:18 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:18 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:19 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:19 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:19 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:20 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:20 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #0 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:20 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #1 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:20 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #1 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:22 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #1 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:22 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #1 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:26:25 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #rc-imageselect-target > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1)
+2026-04-16 15:26:26 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #1 > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)
+2026-04-16 15:28:50 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 15:28:50 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 15:28:52 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://statusinvest.com.br/indices/ibovespa
+2026-04-16 15:28:53 | INFO     | services.selector_service:open_live_selector:64 - Navigating to the page
+2026-04-16 15:28:55 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #treemap-result > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button:nth-of-type(3)
+2026-04-16 15:28:55 | INFO     | services.selector_service:open_live_selector:66 - Content Loaded. Waiting user's click
+2026-04-16 15:28:59 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #main-2 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)
+2026-04-16 15:29:02 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #main-2 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)
+2026-04-16 16:07:33 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 16:07:33 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-16 16:07:48 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://statusinvest.com.br/indices/ibovespa
+2026-04-16 16:07:49 | INFO     | services.selector_service:open_live_selector:64 - Navigating to the page
+2026-04-16 16:07:51 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #treemap-result > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button:nth-of-type(3)
+2026-04-16 16:07:51 | INFO     | services.selector_service:open_live_selector:66 - Content Loaded. Waiting user's click
+2026-04-16 16:07:52 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #main-2 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)
+2026-04-16 16:10:23 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-16 16:10:24 | INFO     | services.selector_service:open_live_selector:64 - Navigating to the page
+2026-04-16 16:10:25 | INFO     | services.selector_service:open_live_selector:66 - Content Loaded. Waiting user's click
+2026-04-16 16:10:29 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-16 16:10:39 | INFO     | main:start_monitoring:53 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-16 16:10:39 | INFO     | services.monitor_service:monitor_price:8 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-16 16:10:44 | INFO     | services.monitor_service:monitor_price:37 - Initial value: 74.880
+2026-04-16 16:10:54 | INFO     | services.monitor_service:monitor_price:41 - [2026-04-16 16:10:54] Value changed | Old: 74.880 | New: 74.848
+2026-04-16 16:11:11 | INFO     | services.monitor_service:monitor_price:41 - [2026-04-16 16:11:11] Value changed | Old: 74.848 | New: 74.838
+2026-04-16 16:11:11 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-16 16:11:21 | ERROR    | services.monitor_service:monitor_price:68 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-16 16:11:27 | INFO     | services.monitor_service:monitor_price:81 - Browser already disconnected.
+2026-04-16 16:11:27 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/

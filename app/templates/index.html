@@ -1,76 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stella Montis</title>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stella Montis - Monitor</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; }
-        iframe { width: 100%; height: 70vh; border: 1px solid #ccc; margin-top: 15px; }
-        .controls { margin-bottom: 15px; }
-        input { width: 400px; padding: 5px; }
-        button { padding: 5px 15px; border-radius: 5px; border: none }
-        #loading { display: none; color: #d9534f; font-weight: bold; margin-bottom: 10px; }
-        #startBtn { display: none; background-color: #4CAF50; color: white; border: none; cursor: pointer; padding: 5px 15px; border-radius: 5px;  }
+      :root {
+        --snow-white: #f0f4f7;
+        --machinery-grey: #2d3436;
+        --industrial-cyan: #00d2ff;
+        --warning-orange: #ff9f43;
+        --status-green: #00ff88;
+        --border-glass: rgba(255, 255, 255, 0.2);
+      }
+
+      body {
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background: radial-gradient(circle at center, #e0e7ec 0%, #b8c6db 100%);
+        color: var(--machinery-grey);
+        margin: 0;
+        padding: 1rem;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.02em;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        padding: 2.5rem;
+        border-radius: 2px;
+        border: 1px solid white;
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.05),
+          inset 0 0 0 1px var(--border-glass);
+        width: 100%;
+        max-width: 450px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--industrial-cyan),
+          var(--industrial-cyan) 20px,
+          #fff 20px,
+          #fff 40px
+        );
+      }
+
+      h1 {
+        text-align: left;
+        color: var(--machinery-grey);
+        margin-bottom: 0.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        border-left: 4px solid var(--industrial-cyan);
+        padding-left: 10px;
+      }
+
+      .ws-status {
+        text-align: left;
+        font-size: 0.7rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        opacity: 0.7;
+      }
+
+      .connected {
+        color: #10ac84;
+      }
+      .disconnected {
+        color: #ee5253;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #636e72;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.9rem;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #d1d8e0;
+        border-radius: 0;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: var(--industrial-cyan);
+        background: #fff;
+        box-shadow: 0 0 8px rgba(0, 210, 255, 0.2);
+      }
+
+      input[readonly] {
+        background-color: #dfe6e9;
+        cursor: not-allowed;
+        font-family: "Courier New", monospace;
+        font-size: 0.8rem;
+      }
+
+      button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid var(--machinery-grey);
+        border-radius: 0;
+        font-weight: 800;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-top: 0.5rem;
+        letter-spacing: 0.05rem;
+        position: relative;
+      }
+
+      .btn-capture {
+        background-color: transparent;
+        color: var(--machinery-grey);
+      }
+
+      .btn-capture:hover {
+        background-color: var(--machinery-grey);
+        color: white;
+      }
+
+      .btn-start {
+        background-color: var(--industrial-cyan);
+        color: white;
+        border: none;
+        margin-top: 1.5rem;
+      }
+
+      .btn-start:hover {
+        background-color: #00b8e6;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+      }
+
+      .status-box {
+        display: none;
+        padding: 1rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 1px solid;
+      }
+
+      .status-info {
+        display: block;
+        background: #fff;
+        border-color: var(--industrial-cyan);
+        color: var(--industrial-cyan);
+      }
+
+      .status-success {
+        display: block;
+        background: #fff;
+        border-color: var(--status-green);
+        color: #10ac84;
+      }
+      
+      .status-error {
+        display: block;
+        background: #fff;
+        border-color: #ff6b6b;
+        color: #ee5253;
+      }
+
     </style>
-</head>
-<body>
-    <h1>Stella Montis</h1>
-    
-    <div class="controls">
-        <input type="text" id="urlInput" placeholder="https://example.com">
-        <input type="email" id="emailInput" placeholder="Seu e-mail">
-        <button onclick="loadUrl()">Load Page</button>
-        <button id="startBtn" onclick="startTask()">Start Monitoring</button>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Stella Montis</h1>
+      <div id="ws-indicator" class="ws-status disconnected">
+        SISTEMA://OFFLINE
+      </div>
+
+      <div class="form-group">
+        <label for="url">Coordenada de Origem (URL):</label>
+        <input
+          type="text"
+          id="url"
+          placeholder="https://www.target-site.com"
+          required
+        />
+        <button class="btn-capture" type="button" onclick="iniciarCaptura()">
+          Sincronizar Interface de Captura
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label for="xpath">Vetor de Dados (XPath):</label>
+        <input
+          type="text"
+          id="xpath"
+          placeholder="AGUARDANDO INPUT EXTERNO..."
+          readonly
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Frequência de Alerta (Email):</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="operador@stella-montis.com"
+          required
+        />
+      </div>
+
+      <button class="btn-start" type="button" onclick="iniciarMonitoramento()">
+        Iniciar Protocolo de Vigília
+      </button>
+
+      <div id="feedback-ui" class="status-box"></div>
     </div>
-    
-    <div id="loading">Loading page, please wait...</div>
-    <p>Target XPath: <strong id="xpathDisplay">None</strong></p>
-    
-    <iframe id="proxyFrame" sandbox="allow-scripts allow-same-origin"></iframe>
 
     <script>
-        let currentXpath = "";
-        const proxyFrame = document.getElementById('proxyFrame');
+      const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+      const wsUrl = `${wsProtocol}//${window.location.host}/ws/xpath`;
+      let ws;
 
-        proxyFrame.onload = function() {
-            document.getElementById('loading').style.display = 'none';
+      const feedbackUi = document.getElementById("feedback-ui");
+
+      function showStatus(message, type = "info", duration = 5000) {
+        feedbackUi.textContent = message;
+        feedbackUi.className = `status-box status-${type}`;
+        if (duration > 0) {
+          setTimeout(() => (feedbackUi.className = "status-box"), duration);
+        }
+      }
+
+      function connectWS() {
+        ws = new WebSocket(wsUrl);
+        const indicator = document.getElementById("ws-indicator");
+
+        ws.onopen = () => {
+          indicator.textContent = "SISTEMA://ONLINE_";
+          indicator.className = "ws-status connected";
         };
 
-        function loadUrl() {
-            const url = document.getElementById('urlInput').value;
-            if (url) {
-                document.getElementById('loading').style.display = 'block';
-                document.getElementById('startBtn').style.display = 'none';
-                proxyFrame.src = `/proxy?url=${encodeURIComponent(url)}`;
-            }
+        ws.onclose = () => {
+          indicator.textContent = "SISTEMA://LINK_LOST_RECONNECTING...";
+          indicator.className = "ws-status disconnected";
+          setTimeout(connectWS, 3000);
+        };
+
+        ws.onmessage = (event) => {
+          const data = JSON.parse(event.data);
+          if (data.type === "xpath_result") {
+            document.getElementById("xpath").value = data.xpath;
+            showStatus("Vetor capturado com sucesso.", "success");
+          } else if (data.type === "error") {
+            alert("ERRO DE PROTOCOLO: " + data.message);
+          }
+        };
+      }
+
+      connectWS();
+
+      function iniciarCaptura() {
+        const url = document.getElementById("url").value;
+        if (!url || !url.startsWith("http")) {
+          showStatus("URL INVÁLIDA.", "error");
+          return;
         }
 
-        window.addEventListener('message', function(event) {
-            if (event.data && event.data.xpath) {
-                currentXpath = event.data.xpath;
-                document.getElementById('xpathDisplay').innerText = currentXpath;
-                document.getElementById('startBtn').style.display = 'inline-block';
-            }
-        });
-
-        function startTask() {
-            const url = document.getElementById('urlInput').value;
-            const email = document.getElementById('emailInput').value;
-
-            if (!email) {
-                alert("Digite um e-mail!");
-                return;
-            }
-            
-            fetch('/start', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: url, xpath: currentXpath, email: email  })
-            })
-            .then(response => response.json())
-            .then(data => alert(data.message))
-            .catch(error => console.error(error));
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ url: url }));
+          showStatus("INTERFACE ABERTA. SELECIONE O ALVO.", "info", 10000);
+        } else {
+          alert("FALHA DE COMUNICAÇÃO COM O NÚCLEO.");
         }
+      }
+
+      async function iniciarMonitoramento() {
+        const url = document.getElementById("url").value;
+        const xpath = document.getElementById("xpath").value;
+        const email = document.getElementById("email").value;
+
+        if (!url || !xpath || !email) {
+          showStatus("CAMPOS INCOMPLETOS.", "error");
+          return;
+        }
+
+        try {
+          const response = await fetch("/start", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url, xpath, email }),
+          });
+
+          if (response.ok) {
+            showStatus("PROTOCOLO INICIADO.", "success", 8000);
+          } else {
+            showStatus("FALHA NA INICIALIZAÇÃO.", "error");
+          }
+        } catch (error) {
+          alert("ERRO DE REDE.");
+          console.error(error);
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

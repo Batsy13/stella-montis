@@ -38,7 +38,7 @@ async def monitor_price(url: str, selector: str, email: str, interval: int = 10)
                             
                             elif current_value != last_value:
                                 log_msg = f"[{now}] Value changed | Old: {last_value} | New: {current_value}"
-                                logger.warning(log_msg)
+                                logger.info(log_msg)
 
                                 subject = "Valor alterado!"
                                 message = (

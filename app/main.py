@@ -1,125 +1,77 @@
-from fastapi import FastAPI, BackgroundTasks
-from fastapi.responses import HTMLResponse
-from pydantic import BaseModel
-from playwright.async_api import async_playwright
-import uvicorn
-import re
-from services.monitor_service import monitor_price
+import asyncio
 from pathlib import Path
-from core.logger_config import setup_logger
+from typing import Dict
+
+from fastapi.staticfiles import StaticFiles
+import uvicorn
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, BackgroundTasks, WebSocket, WebSocketDisconnect, HTTPException
+from fastapi.responses import HTMLResponse
+from pydantic import BaseModel, EmailStr
 from loguru import logger
 
-import asyncio
+from services.monitor_service import monitor_price
+from services.selector_service import open_live_selector
+from core.logger_config import setup_logger
 
 if hasattr(asyncio, "WindowsProactorEventLoopPolicy"):
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
-app = FastAPI()
 BASE_DIR = Path(__file__).resolve().parent
+TEMPLATES_DIR = BASE_DIR / "templates"
 
+app = FastAPI(title="Stella Montis - Price Monitor")
 setup_logger()
-logger.info("Application started")
 
 class MonitorRequest(BaseModel):
     url: str
     xpath: str
-    email: str
+    email: EmailStr
 
-@app.post("/start")
-async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks):
-    logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
-    background_tasks.add_task(monitor_price, req.url, req.xpath, req.email)
-    return {"message": "Monitoring started"}
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Application started and ready for requests")
+    
+    yield 
+    
+    logger.info("Application is shutting down. Cleaning up resources...")
+
+app = FastAPI(title="Stella Montis - Price Monitor", lifespan=lifespan)
 
 @app.get("/", response_class=HTMLResponse)
 async def index():
-    template_path = BASE_DIR / "templates" / "index.html"
-    with open(template_path, "r", encoding="utf-8") as f:
-        return f.read()
+    template_path = TEMPLATES_DIR / "index.html"
+    try:
+        with open(template_path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        logger.error(f"Template not found at: {template_path}")
+        raise HTTPException(status_code=404, detail="Frontend template missing")
 
-@app.get("/proxy", response_class=HTMLResponse)
-async def proxy(url: str):
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
-        )
-        page = await context.new_page()
-        try:
-            await page.goto(url, wait_until="load", timeout=60000)
-            await page.wait_for_timeout(5000)
-        except:
-            pass
-        html = await page.content()
-        await browser.close()
-        
-    html = re.sub(r'<meta[^>]*http-equiv=["\']?(Content-Security-Policy|X-Frame-Options)["\']?[^>]*>', '', html, flags=re.IGNORECASE)
-    html = re.sub(r'<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>', '', html, flags=re.IGNORECASE)
-        
-    base_tag = f'<base href="{url}">'
+@app.post("/start")
+async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks) -> Dict[str, str]:
+    logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
+    background_tasks.add_task(monitor_price, req.url, req.xpath, req.email)
+    return {"message": "Monitoring started successfully"}
+
+@app.websocket("/ws/xpath")
+async def xpath_websocket(websocket: WebSocket):
+    await websocket.accept()
+    logger.info("WebSocket: Client conected with the board.")
     
-    script = """
-    <style>
-        .scraper-hover { outline: 2px solid red !important; cursor: crosshair !important; }
-        .scraper-selected { outline: 3px solid blue !important; background-color: rgba(0, 0, 255, 0.1) !important; }
-    </style>
-    <script>
-    let selectedElement = null;
-
-    document.addEventListener('mouseover', function(e) {
-        e.target.classList.add('scraper-hover');
-    }, true);
-
-    document.addEventListener('mouseout', function(e) {
-        e.target.classList.remove('scraper-hover');
-    }, true);
-
-    document.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if (selectedElement) {
-            selectedElement.classList.remove('scraper-selected');
-        }
-        selectedElement = e.target;
-        selectedElement.classList.add('scraper-selected');
-        
-        let el = e.target;
-        let path = [];
-        
-        while (el.nodeType === Node.ELEMENT_NODE) {
-            let selector = el.nodeName.toLowerCase();
-            if (el.id) {
-                path.unshift('#' + el.id);
-                break;
-            } else {
-                let sib = el, nth = 1;
-                while (sib = sib.previousElementSibling) {
-                    if (sib.nodeName.toLowerCase() === selector) nth++;
-                }
-                selector += `:nth-of-type(${nth})`;
-            }
-            path.unshift(selector);
-            el = el.parentNode;
-        }
-        
-        let finalSelector = path.join(' > ');
-        window.parent.postMessage({xpath: finalSelector}, '*');
-    }, true);
-    </script>
-    """
-    
-    if "<head>" in html:
-        html = html.replace("<head>", f"<head>{base_tag}")
-    else:
-        html = base_tag + html
-        
-    if "</body>" in html:
-        html = html.replace("</body>", f"{script}</body>")
-    else:
-        html += script
-        
-    return html
+    try:
+        while True:
+            data = await websocket.receive_json()
+            url = data.get("url")
+            
+            if url:
+                logger.info(f"WebSocket: Starting Live Selector to {url}")
+                asyncio.create_task(open_live_selector(url, websocket))
+                
+    except WebSocketDisconnect:
+        logger.info("WebSocket: Client disconected.")
+    except Exception as e:
+        logger.error(f"WebSocket Error: {e}")
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
