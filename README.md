@@ -44,10 +44,8 @@ Este projeto é um assistente de lances automatizado desenvolvido como parte do 
 
 ### Feito com
 
-<!--Alterar as linguagens-->
-[![React][React.js]][React-url]
-[![Vite][Vite]][Vite-url]
-[![Tailwind CSS][Tailwindcss]][Tailwind-url]
+[![Python][Python]][Python-url]
+[![FastAPI][FastAPI]][FastAPI-url]
 
 ---
 
@@ -84,13 +82,17 @@ O projeto foi estruturado para cumprir os seguintes requisitos pontuáveis:
     ```bash
     cd projeto
     ```
-3.  **Instale as dependências:** <!--Alterar quando tiver as dependências-->
+3.  **Instale as dependências:**
     ```bash
     pip install -r requirements.txt 
     ```
-4.  **Inicie a aplicação:**
+4.  **Instale os navegadores:**
     ```bash
-    python main.py
+    playwright install
+    ```
+5.  **Inicie a aplicação:**
+    ```bash
+    python3 main.py
     ```
 
 ## Alunos
@@ -109,11 +111,7 @@ Segue o grupo responsável pelo desenvolvimento do projeto.
 <p align="right">(<a href="#readme-top">voltar ao início</a>)</p>
 
 <!--Alterar quando as linguagens-->
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[Vite]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white
-[Vite-url]: https://vite.dev/
-[Tailwindcss]: https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC
-[Tailwind-url]: https://tailwindcss.com/
-[React-url]: https://reactjs.org/
-[Shadcn-url]: https://ui.shadcn.com
-
+[Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://www.python.org/
+[FastAPI]: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
+[FastAPI-url]: https://fastapi.tiangolo.com/
