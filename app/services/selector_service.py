@@ -18,6 +18,8 @@ async def open_live_selector(url: str, websocket: WebSocket):
         await page.expose_function("sendToPython", on_xpath_selected)
         
         await page.add_init_script("""
+            let currentSelectedElement = null;
+
             const injectCSS = setInterval(() => {
                 if (document.head) {
                     const style = document.createElement('style');
@@ -36,6 +38,13 @@ async def open_live_selector(url: str, websocket: WebSocket):
             document.addEventListener('click', (e) => {
                 e.preventDefault(); 
                 e.stopPropagation();
+                
+                if (currentSelectedElement) {
+                    currentSelectedElement.classList.remove('scraper-selected');
+                }
+                
+                currentSelectedElement = e.target;
+                currentSelectedElement.classList.add('scraper-selected');
                 
                 let el = e.target;
                 let path = [];
