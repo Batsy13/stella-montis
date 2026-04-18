@@ -1,17 +1,41 @@
 import asyncio
+import requests
 from datetime import datetime
 from playwright.async_api import async_playwright, Error as PlaywrightError
 from loguru import logger
-from services.email_service import send_email
 
-async def monitor_price(url: str, selector: str, email: str, interval: int = 10):
+def send_google_form(message):
+    url = "https://docs.google.com/forms/d/e/1FAIpQLScYm5JlmnR1F2THqf00mKa3C71hgAVa2HLbIg84-88rw74ySw/formResponse"
+
+    data = {
+        "entry.1608177186": message
+    }
+
+    requests.post(url, data=data)
+
+async def show_visual_form(message):
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False)
+        page = await browser.new_page()
+
+        await page.goto("https://docs.google.com/forms/d/e/1FAIpQLScYm5JlmnR1F2THqf00mKa3C71hgAVa2HLbIg84-88rw74ySw/viewform")
+
+        await page.wait_for_selector('textarea')
+        await page.fill('textarea', message)
+
+        await page.locator('text=Enviar').click()
+
+        await page.wait_for_timeout(3000)
+        await browser.close()
+
+async def monitor_price(url: str, selector: str, interval: int = 10):
     logger.info(f"Starting persistent monitoring | URL: {url}")
 
     start_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     start_subject = "Monitoramento Iniciado"
     start_message = f"O monitoramento para a URL {url} foi iniciado com sucesso às {start_time}."
     
-    asyncio.create_task(asyncio.to_thread(send_email, email, start_subject, start_message))
+    asyncio.create_task(asyncio.to_thread(start_subject, start_message))
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False) 
@@ -49,9 +73,12 @@ async def monitor_price(url: str, selector: str, email: str, interval: int = 10)
                                     f"Novo valor: {current_value}"
                                 )
 
+                                send_google_form(message)
+
                                 asyncio.create_task(
-                                    asyncio.to_thread(send_email, email, subject, message)
+                                    show_visual_form(message)
                                 )
+
                                 last_value = current_value
                     
                     await asyncio.sleep(interval)
