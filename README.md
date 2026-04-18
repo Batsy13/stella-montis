@@ -92,7 +92,7 @@ O projeto foi estruturado para cumprir os seguintes requisitos pontuáveis:
     ```
 5.  **Inicie a aplicação:**
     ```bash
-    python main.py
+    python3 main.py
     ```
 
 ## Alunos
@@ -115,4 +115,3 @@ Segue o grupo responsável pelo desenvolvimento do projeto.
 [Python-url]: https://www.python.org/
 [FastAPI]: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
 [FastAPI-url]: https://fastapi.tiangolo.com/
-
