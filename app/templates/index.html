@@ -226,17 +226,7 @@
         />
       </div>
 
-      <div class="form-group">
-        <label for="email">Frequência de Alerta (Email):</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="operador@stella-montis.com"
-          required
-        />
-      </div>
-
-      <button class="btn-start" type="button" onclick="iniciarMonitoramento()">
+          <button class="btn-start" type="button" onclick="iniciarMonitoramento()">
         Iniciar Protocolo de Vigília
       </button>
 
@@ -304,9 +294,8 @@
       async function iniciarMonitoramento() {
         const url = document.getElementById("url").value;
         const xpath = document.getElementById("xpath").value;
-        const email = document.getElementById("email").value;
 
-        if (!url || !xpath || !email) {
+        if (!url || !xpath) {
           showStatus("CAMPOS INCOMPLETOS.", "error");
           return;
         }
@@ -315,7 +304,7 @@
           const response = await fetch("/start", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url, xpath, email }),
+            body: JSON.stringify({ url, xpath}),
           });
 
           if (response.ok) {
