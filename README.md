@@ -55,9 +55,8 @@ Para obter uma cópia local deste projeto e colocá-la em funcionamento, siga es
 
 ### Especificações Técnicas
 
-<!--Alterar quando definirmos-->
-* **Linguagem de Programação:** [Inserir Linguagem, ex: Python].
-* **Bibliotecas Utilizadas:** [Inserir Bibliotecas, ex: Selenium, BeautifulSoup, Pytest].
+* **Linguagem de Programação:** Python.
+* **Bibliotecas Utilizadas:** FastAPI, Uvicorn, Playwright, Loguru, Pydantic.
 * **Documentação:** Gerada via [Inserir ferramenta, ex: Sphinx ou MkDocs].
 * **Análise de Algoritmo:** Complexidade de tempo calculada em notação Big O.
 
