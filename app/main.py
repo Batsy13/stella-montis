@@ -1,32 +1,35 @@
 import asyncio
 from pathlib import Path
 from typing import Dict
+import sys
 
 from fastapi.staticfiles import StaticFiles
 import uvicorn
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, BackgroundTasks, WebSocket, WebSocketDisconnect, HTTPException
 from fastapi.responses import HTMLResponse
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from loguru import logger
 
 from services.monitor_service import monitor_price
 from services.selector_service import open_live_selector
 from core.logger_config import setup_logger
 
-if hasattr(asyncio, "WindowsProactorEventLoopPolicy"):
-    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+if sys.platform == 'win32':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 
-app = FastAPI(title="Stella Montis - Price Monitor")
 setup_logger()
-
 class MonitorRequest(BaseModel):
     url: str
     xpath: str
-    email: EmailStr
+
+class StopRequest(BaseModel):
+    url: str
+
+active_tasks: Dict[str, asyncio.Task] = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -49,10 +52,23 @@ async def index():
         raise HTTPException(status_code=404, detail="Frontend template missing")
 
 @app.post("/start")
-async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks) -> Dict[str, str]:
+async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
     logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
-    background_tasks.add_task(monitor_price, req.url, req.xpath, req.email)
+    if req.url in active_tasks:
+        active_tasks[req.url].cancel()
+    
+    task = asyncio.create_task(monitor_price(req.url, req.xpath))
+    active_tasks[req.url] = task
     return {"message": "Monitoring started successfully"}
+
+@app.post("/stop")
+async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
+    logger.info(f"Stop monitoring requested | URL: {req.url}")
+    if req.url in active_tasks:
+        active_tasks[req.url].cancel()
+        del active_tasks[req.url]
+        return {"message": "Monitoring stopped successfully"}
+    return {"message": "No active monitoring for this URL"}
 
 @app.websocket("/ws/xpath")
 async def xpath_websocket(websocket: WebSocket):
@@ -74,4 +90,7 @@ async def xpath_websocket(websocket: WebSocket):
         logger.error(f"WebSocket Error: {e}")
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    if sys.platform == 'win32':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)

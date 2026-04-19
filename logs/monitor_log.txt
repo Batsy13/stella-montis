@@ -351,3 +351,369 @@ Call log:
 2026-04-16 16:11:21 | ERROR    | services.monitor_service:monitor_price:68 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
 2026-04-16 16:11:27 | INFO     | services.monitor_service:monitor_price:81 - Browser already disconnected.
 2026-04-16 16:11:27 | INFO     | services.monitor_service:monitor_price:86 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 15:14:17 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:14:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:14:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:14:19 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:14:53 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:16:08 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:16:10 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:16:10 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:16:10 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:16:14 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:16:16 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:16:28 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:18:50 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:18:51 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:18:52 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:18:53 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:18:53 | INFO     | main:lifespan:34 - Application started and ready for requests
+2026-04-18 15:18:54 | INFO     | main:xpath_websocket:61 - WebSocket: Client conected with the board.
+2026-04-18 15:18:57 | INFO     | main:xpath_websocket:69 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:19:03 | INFO     | main:xpath_websocket:73 - WebSocket: Client disconected.
+2026-04-18 15:19:03 | INFO     | main:lifespan:38 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:19:05 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:19:05 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:19:05 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:19:07 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:20:04 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:20:04 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:22:23 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:22:25 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:22:25 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:22:25 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:22:27 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:22:36 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:22:39 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:22:39 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:22:46 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:23:06 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:23:06 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:23:08 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:23:08 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:23:08 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:23:09 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:23:12 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:23:12 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:23:16 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:26 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:24:26 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:24:31 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:24:33 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:24:33 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:24:33 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:24:34 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:24:36 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:40 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:40 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:40 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:41 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:24:48 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:24:48 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:24:49 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:24:50 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:24:50 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:24:51 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:24:54 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:24:55 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:25:03 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:14 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:16 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:18 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:19 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:19 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:19 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:19 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:19 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:20 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:20 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:20 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:20 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:20 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:21 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:21 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:21 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:21 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:21 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:22 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:22 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:25:25 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:25:33 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:25:36 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:26:51 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:26:51 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:29:00 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:29:02 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:29:02 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:29:02 | INFO     | main:lifespan:38 - Application started and ready for requests
+2026-04-18 15:29:02 | INFO     | main:xpath_websocket:65 - WebSocket: Client conected with the board.
+2026-04-18 15:29:05 | INFO     | main:xpath_websocket:73 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:29:09 | INFO     | main:xpath_websocket:77 - WebSocket: Client disconected.
+2026-04-18 15:29:09 | INFO     | main:xpath_websocket:65 - WebSocket: Client conected with the board.
+2026-04-18 15:29:14 | INFO     | main:xpath_websocket:73 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:31:26 | INFO     | main:xpath_websocket:77 - WebSocket: Client disconected.
+2026-04-18 15:31:26 | INFO     | main:lifespan:42 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:31:28 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:31:28 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:31:28 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-18 15:31:29 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-18 15:31:32 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-18 15:31:32 | INFO     | main:lifespan:37 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:31:34 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:31:34 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:31:34 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:31:36 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:31:36 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:31:36 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:32:53 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:32:55 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:32:55 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:32:55 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:32:55 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:33:00 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 15:38:04 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:38:04 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:38:06 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:06 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:06 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:38:07 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:38:13 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:38:13 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:38:15 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:15 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:15 | INFO     | main:lifespan:29 - Application started and ready for requests
+2026-04-18 15:38:17 | INFO     | main:xpath_websocket:56 - WebSocket: Client conected with the board.
+2026-04-18 15:38:26 | INFO     | main:xpath_websocket:68 - WebSocket: Client disconected.
+2026-04-18 15:38:26 | INFO     | main:lifespan:33 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:38:29 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:29 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:38:29 | INFO     | main:lifespan:30 - Application started and ready for requests
+2026-04-18 15:38:29 | INFO     | main:xpath_websocket:57 - WebSocket: Client conected with the board.
+2026-04-18 15:38:33 | INFO     | main:xpath_websocket:65 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 15:39:11 | INFO     | main:xpath_websocket:69 - WebSocket: Client disconected.
+2026-04-18 15:39:11 | INFO     | main:xpath_websocket:57 - WebSocket: Client conected with the board.
+2026-04-18 15:39:22 | INFO     | main:xpath_websocket:65 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:40:44 | INFO     | main:xpath_websocket:69 - WebSocket: Client disconected.
+2026-04-18 15:40:44 | INFO     | main:lifespan:34 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:40:58 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:40:58 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:40:58 | INFO     | main:lifespan:33 - Application started and ready for requests
+2026-04-18 15:40:58 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-18 15:41:04 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-18 15:41:04 | INFO     | main:xpath_websocket:60 - WebSocket: Client conected with the board.
+2026-04-18 15:41:09 | INFO     | main:xpath_websocket:68 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:08 | INFO     | main:xpath_websocket:72 - WebSocket: Client disconected.
+2026-04-18 15:42:08 | INFO     | main:lifespan:37 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:42:10 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:10 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:10 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:42:11 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:42:38 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:42:38 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:42:39 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:40 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:40 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:42:41 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:42:46 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:42:46 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:42:48 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:51 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:42:51 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:42:53 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:53 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:42:53 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:42:54 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:42:56 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:58 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:58 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:58 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:42:58 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:44:35 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:44:36 | INFO     | main:lifespan:36 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:44:52 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:44:52 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:44:52 | INFO     | main:lifespan:32 - Application started and ready for requests
+2026-04-18 15:44:55 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:45:02 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:45:02 | INFO     | main:xpath_websocket:59 - WebSocket: Client conected with the board.
+2026-04-18 15:45:06 | INFO     | main:xpath_websocket:67 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:45:08 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 15:45:11 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 15:45:20 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:45:24 | INFO     | main:start_monitoring:52 - Monitoring requested | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:45:24 | INFO     | services.monitor_service:monitor_price:32 - Starting persistent monitoring | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:45:32 | INFO     | services.monitor_service:monitor_price:61 - Initial value: $75,525.72
+2026-04-18 15:45:42 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:45:42] Value changed | Old: $75,525.72 | New: $75,587.44
+2026-04-18 15:45:53 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:45:53] Value changed | Old: $75,587.44 | New: $75,585.31
+2026-04-18 15:46:04 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:04] Value changed | Old: $75,585.31 | New: $75,590.28
+2026-04-18 15:46:14 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:14] Value changed | Old: $75,590.28 | New: $75,597.61
+2026-04-18 15:46:25 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:25] Value changed | Old: $75,597.61 | New: $75,606.85
+2026-04-18 15:46:36 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:36] Value changed | Old: $75,606.85 | New: $75,621.16
+2026-04-18 15:46:47 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:47] Value changed | Old: $75,621.16 | New: $75,633.52
+2026-04-18 15:46:58 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:46:58] Value changed | Old: $75,633.52 | New: $75,662.34
+2026-04-18 15:47:40 | ERROR    | services.monitor_service:monitor_price:95 - Unexpected monitoring error: HTTPSConnectionPool(host='docs.google.com', port=443): Max retries exceeded with url: /forms/d/e/1FAIpQLScYm5JlmnR1F2THqf00mKa3C71hgAVa2HLbIg84-88rw74ySw/formResponse (Caused by ConnectTimeoutError(<HTTPSConnection(host='docs.google.com', port=443) at 0x1c2fbd92590>, 'Connection to docs.google.com timed out. (connect timeout=None)'))
+2026-04-18 15:47:40 | ERROR    | services.monitor_service:monitor_price:104 - Could not send termination email: name 'send_email' is not defined
+2026-04-18 15:47:40 | INFO     | main:xpath_websocket:71 - WebSocket: Client disconected.
+2026-04-18 15:47:40 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:50:26 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:50:26 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:50:26 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 15:50:28 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 15:51:04 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:51:06 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 15:51:11 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 15:51:12 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:51:27 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:51:27 | INFO     | services.monitor_service:monitor_price:32 - Starting persistent monitoring | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:51:36 | INFO     | services.monitor_service:monitor_price:61 - Initial value: $75,718.27
+2026-04-18 15:51:46 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:51:46] Value changed | Old: $75,718.27 | New: $75,681.88
+2026-04-18 15:52:19 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:52:19] Value changed | Old: $75,681.88 | New: $75,703.19
+2026-04-18 15:52:51 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:52:51] Value changed | Old: $75,703.19 | New: $75,690.60
+2026-04-18 15:53:12 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 15:53:22 | ERROR    | services.monitor_service:monitor_price:95 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 15:53:22 | ERROR    | services.monitor_service:monitor_price:104 - Could not send termination email: name 'send_email' is not defined
+2026-04-18 15:53:22 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 15:53:22 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:53:22 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 15:55:35 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:55:35 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 15:55:35 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 15:55:35 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 15:55:54 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:55:56 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 15:56:01 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 15:56:01 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:56:10 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com | Selector: #section-coin-overview > div:nth-of-type(2) > span:nth-of-type(1)
+2026-04-18 15:56:10 | INFO     | services.monitor_service:monitor_price:32 - Starting persistent monitoring | URL: https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:56:19 | INFO     | services.monitor_service:monitor_price:61 - Initial value: $75,686.42
+2026-04-18 15:56:29 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:56:29] Value changed | Old: $75,686.42 | New: $75,597.00
+2026-04-18 15:57:02 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:57:02] Value changed | Old: $75,597.00 | New: $75,586.47
+2026-04-18 15:57:34 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:57:34] Value changed | Old: $75,586.47 | New: $75,580.93
+2026-04-18 15:58:05 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:58:05] Value changed | Old: $75,580.93 | New: $75,574.35
+2026-04-18 15:58:37 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:58:37] Value changed | Old: $75,574.35 | New: $75,630.69
+2026-04-18 15:59:08 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 15:59:08] Value changed | Old: $75,630.69 | New: $75,656.21
+2026-04-18 15:59:30 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 15:59:40 | ERROR    | services.monitor_service:monitor_price:95 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 15:59:40 | ERROR    | services.monitor_service:monitor_price:104 - Could not send termination email: name 'send_email' is not defined
+2026-04-18 15:59:40 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 15:59:40 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
+2026-04-18 15:59:40 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:01:49 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:01:49 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:01:49 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:02:29 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:02:29 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:02:33 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:02:35 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:02:37 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:02:40 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:02:44 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:02:44 | INFO     | services.monitor_service:monitor_price:32 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:02:51 | INFO     | services.monitor_service:monitor_price:61 - Initial value: 75.854
+2026-04-18 20:04:10 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:10] Value changed | Old: 75.854 | New: 82
+2026-04-18 20:04:20 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:20] Value changed | Old: 82 | New: 902
+2026-04-18 20:04:40 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:40] Value changed | Old: 902 | New: 891
+2026-04-18 20:04:50 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:04:50 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:04:50 | ERROR    | services.monitor_service:monitor_price:95 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 20:04:50 | ERROR    | services.monitor_service:monitor_price:104 - Could not send termination email: name 'send_email' is not defined
+2026-04-18 20:04:50 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 20:04:50 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:04:50 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:10:20 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:10:20 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:10:20 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:10:26 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:10:26 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:10:27 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:10:31 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:10:32 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:10:33 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:10:35 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:10:56 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:11:07 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:11:07 | INFO     | services.monitor_service:monitor_price:27 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:11:11 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.870
+2026-04-18 20:11:41 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:11:41] Value changed | Old: 75.870 | New: 75.857
+2026-04-18 20:13:09 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:13:09] Value changed | Old: 75.857 | New: 75.869
+2026-04-18 20:13:19 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:13:19] Value changed | Old: 75.869 | New: 75.878
+2026-04-18 20:13:28 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:13:30 | ERROR    | services.monitor_service:monitor_price:90 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 20:13:30 | INFO     | services.monitor_service:monitor_price:104 - Browser already disconnected.
+2026-04-18 20:13:30 | INFO     | services.monitor_service:monitor_price:109 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:13:30 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:51:42 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:51:43 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:51:43 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:52:06 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:52:08 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:52:10 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:52:12 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:52:16 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:40 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:43 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:43 | INFO     | services.monitor_service:monitor_price:27 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:52:50 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.772
+2026-04-18 20:53:00 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:53:00] Value changed | Old: 75.772 | New: 75.768
+2026-04-18 20:53:07 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:53:11 | INFO     | services.monitor_service:monitor_price:83 - Playwright connection closed. Finishing task.
+2026-04-18 20:53:12 | INFO     | services.monitor_service:monitor_price:104 - Browser already disconnected.
+2026-04-18 20:53:12 | INFO     | services.monitor_service:monitor_price:109 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:53:12 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 21:01:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:01:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:01:19 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 21:02:07 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 21:02:10 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:02:12 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 21:02:14 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 21:02:16 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:26 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:33 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:33 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:02:39 | INFO     | services.monitor_service:monitor_price:62 - Initial value: 75.778
+2026-04-18 21:03:37 | INFO     | services.monitor_service:monitor_price:66 - [2026-04-18 21:03:37] Value changed | Old: 75.778 | New: 75.780
+2026-04-18 21:03:43 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 21:03:47 | INFO     | services.monitor_service:monitor_price:89 - Playwright connection closed. Finishing task.
+2026-04-18 21:03:48 | INFO     | services.monitor_service:monitor_price:110 - Browser already disconnected.
+2026-04-18 21:03:48 | INFO     | services.monitor_service:monitor_price:115 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:03:48 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 21:22:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:22:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:22:59 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 21:23:22 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 21:23:27 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:23:29 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 21:23:30 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 21:23:32 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:43 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:47 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:47 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:23:52 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.623
+2026-04-18 21:24:21 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 21:24:21] Value changed | Old: 75.623 | New: 75.617
+2026-04-18 21:24:28 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 21:24:31 | INFO     | services.monitor_service:monitor_price:86 - Playwright connection closed. Finishing task.
+2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:24:36 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 23:42:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 23:42:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 23:42:19 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-18 23:43:13 | INFO     | main:xpath_websocket:76 - WebSocket: Client conected with the board.
+2026-04-18 23:43:51 | INFO     | main:xpath_websocket:84 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:43:53 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 23:43:53 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 23:43:53 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:43:56 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 23:43:59 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.716
+2026-04-18 23:44:18 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 23:44:18] Value changed | Old: 75.716 | New: 75.704
+2026-04-18 23:44:28 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 23:44:28] Value changed | Old: 75.704 | New: 75.695
+2026-04-18 23:44:37 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:44:37 | INFO     | services.monitor_service:monitor_price:91 - Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
+2026-04-18 23:44:44 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/

@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-pydantic[email]
-python-dotenv
+pydantic
 loguru
 playwright
+requests

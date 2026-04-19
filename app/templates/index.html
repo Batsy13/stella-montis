@@ -161,6 +161,20 @@
         box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
       }
 
+      .btn-stop {
+        background-color: #d63031;
+        color: white;
+        border: none;
+        margin-top: 1rem;
+        display: none;
+      }
+
+      .btn-stop:hover {
+        background-color: #ff7675;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(214, 48, 49, 0.3);
+      }
+
       .status-box {
         display: none;
         padding: 1rem;
@@ -210,7 +224,7 @@
           placeholder="https://www.target-site.com"
           required
         />
-        <button class="btn-capture" type="button" onclick="iniciarCaptura()">
+        <button class="btn-capture" type="button" onclick="startCapture()">
           Sincronizar Interface de Captura
         </button>
       </div>
@@ -226,18 +240,12 @@
         />
       </div>
 
-      <div class="form-group">
-        <label for="email">Frequência de Alerta (Email):</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="operador@stella-montis.com"
-          required
-        />
-      </div>
-
-      <button class="btn-start" type="button" onclick="iniciarMonitoramento()">
+      <button class="btn-start" type="button" onclick="startMonitoring()">
         Iniciar Protocolo de Vigília
+      </button>
+
+      <button class="btn-stop" type="button" onclick="stopMonitoring()">
+        Interromper Protocolo
       </button>
 
       <div id="feedback-ui" class="status-box"></div>
@@ -286,7 +294,7 @@
 
       connectWS();
 
-      function iniciarCaptura() {
+      function startCapture() {
         const url = document.getElementById("url").value;
         if (!url || !url.startsWith("http")) {
           showStatus("URL INVÁLIDA.", "error");
@@ -301,12 +309,11 @@
         }
       }
 
-      async function iniciarMonitoramento() {
+      async function startMonitoring() {
         const url = document.getElementById("url").value;
         const xpath = document.getElementById("xpath").value;
-        const email = document.getElementById("email").value;
 
-        if (!url || !xpath || !email) {
+        if (!url || !xpath) {
           showStatus("CAMPOS INCOMPLETOS.", "error");
           return;
         }
@@ -315,13 +322,43 @@
           const response = await fetch("/start", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url, xpath, email }),
+            body: JSON.stringify({ url, xpath}),
           });
 
           if (response.ok) {
             showStatus("PROTOCOLO INICIADO.", "success", 8000);
+            document.querySelector('.btn-start').style.display = 'none';
+            document.querySelector('.btn-stop').style.display = 'block';
           } else {
             showStatus("FALHA NA INICIALIZAÇÃO.", "error");
+          }
+        } catch (error) {
+          alert("ERRO DE REDE.");
+          console.error(error);
+        }
+      }
+
+      async function stopMonitoring() {
+        const url = document.getElementById("url").value;
+
+        if (!url) {
+          showStatus("URL NECESSÁRIA PARA INTERRUPÇÃO.", "error");
+          return;
+        }
+
+        try {
+          const response = await fetch("/stop", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url }),
+          });
+
+          if (response.ok) {
+            showStatus("PROTOCOLO INTERROMPIDO.", "info", 8000);
+            document.querySelector('.btn-start').style.display = 'block';
+            document.querySelector('.btn-stop').style.display = 'none';
+          } else {
+            showStatus("FALHA AO PARAR MONITORAMENTO.", "error");
           }
         } catch (error) {
           alert("ERRO DE REDE.");
