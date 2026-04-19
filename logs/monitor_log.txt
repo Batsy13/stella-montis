@@ -702,3 +702,18 @@ Call log:
 2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
 2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
 2026-04-18 21:24:36 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 23:42:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 23:42:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 23:42:19 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-18 23:43:13 | INFO     | main:xpath_websocket:76 - WebSocket: Client conected with the board.
+2026-04-18 23:43:51 | INFO     | main:xpath_websocket:84 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:43:53 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 23:43:53 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 23:43:53 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:43:56 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 23:43:59 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.716
+2026-04-18 23:44:18 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 23:44:18] Value changed | Old: 75.716 | New: 75.704
+2026-04-18 23:44:28 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 23:44:28] Value changed | Old: 75.704 | New: 75.695
+2026-04-18 23:44:37 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 23:44:37 | INFO     | services.monitor_service:monitor_price:91 - Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
+2026-04-18 23:44:44 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/

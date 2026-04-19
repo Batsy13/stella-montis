@@ -26,6 +26,11 @@ class MonitorRequest(BaseModel):
     url: str
     xpath: str
 
+class StopRequest(BaseModel):
+    url: str
+
+active_tasks: Dict[str, asyncio.Task] = {}
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Application started and ready for requests")
@@ -47,10 +52,23 @@ async def index():
         raise HTTPException(status_code=404, detail="Frontend template missing")
 
 @app.post("/start")
-async def start_monitoring(req: MonitorRequest, background_tasks: BackgroundTasks) -> Dict[str, str]:
+async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
     logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
-    background_tasks.add_task(monitor_price, req.url, req.xpath)
+    if req.url in active_tasks:
+        active_tasks[req.url].cancel()
+    
+    task = asyncio.create_task(monitor_price(req.url, req.xpath))
+    active_tasks[req.url] = task
     return {"message": "Monitoring started successfully"}
+
+@app.post("/stop")
+async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
+    logger.info(f"Stop monitoring requested | URL: {req.url}")
+    if req.url in active_tasks:
+        active_tasks[req.url].cancel()
+        del active_tasks[req.url]
+        return {"message": "Monitoring stopped successfully"}
+    return {"message": "No active monitoring for this URL"}
 
 @app.websocket("/ws/xpath")
 async def xpath_websocket(websocket: WebSocket):
