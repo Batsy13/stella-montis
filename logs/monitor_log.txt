@@ -604,3 +604,101 @@ Call log:
 2026-04-18 15:59:40 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
 2026-04-18 15:59:40 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://coinmarketcap.com/currencies/bitcoin/?utm_source=chatgpt.com
 2026-04-18 15:59:40 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:01:49 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:01:49 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:01:49 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:02:29 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:02:29 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:02:33 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:02:35 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:02:37 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:02:40 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:02:44 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:02:44 | INFO     | services.monitor_service:monitor_price:32 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:02:51 | INFO     | services.monitor_service:monitor_price:61 - Initial value: 75.854
+2026-04-18 20:04:10 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:10] Value changed | Old: 75.854 | New: 82
+2026-04-18 20:04:20 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:20] Value changed | Old: 82 | New: 902
+2026-04-18 20:04:40 | INFO     | services.monitor_service:monitor_price:65 - [2026-04-18 20:04:40] Value changed | Old: 902 | New: 891
+2026-04-18 20:04:50 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:04:50 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:04:50 | ERROR    | services.monitor_service:monitor_price:95 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 20:04:50 | ERROR    | services.monitor_service:monitor_price:104 - Could not send termination email: name 'send_email' is not defined
+2026-04-18 20:04:50 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 20:04:50 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:04:50 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:10:20 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:10:20 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:10:20 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:10:26 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:10:26 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:10:27 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:10:31 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:10:32 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:10:33 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:10:35 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:10:56 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:11:07 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:11:07 | INFO     | services.monitor_service:monitor_price:27 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:11:11 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.870
+2026-04-18 20:11:41 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:11:41] Value changed | Old: 75.870 | New: 75.857
+2026-04-18 20:13:09 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:13:09] Value changed | Old: 75.857 | New: 75.869
+2026-04-18 20:13:19 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:13:19] Value changed | Old: 75.869 | New: 75.878
+2026-04-18 20:13:28 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:13:30 | ERROR    | services.monitor_service:monitor_price:90 - Unexpected monitoring error: Locator.is_visible: Connection closed while reading from the driver
+2026-04-18 20:13:30 | INFO     | services.monitor_service:monitor_price:104 - Browser already disconnected.
+2026-04-18 20:13:30 | INFO     | services.monitor_service:monitor_price:109 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:13:30 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 20:51:42 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:51:43 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 20:51:43 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 20:52:06 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 20:52:08 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:52:10 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 20:52:12 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 20:52:16 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:40 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:43 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 20:52:43 | INFO     | services.monitor_service:monitor_price:27 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:52:50 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.772
+2026-04-18 20:53:00 | INFO     | services.monitor_service:monitor_price:60 - [2026-04-18 20:53:00] Value changed | Old: 75.772 | New: 75.768
+2026-04-18 20:53:07 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 20:53:11 | INFO     | services.monitor_service:monitor_price:83 - Playwright connection closed. Finishing task.
+2026-04-18 20:53:12 | INFO     | services.monitor_service:monitor_price:104 - Browser already disconnected.
+2026-04-18 20:53:12 | INFO     | services.monitor_service:monitor_price:109 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 20:53:12 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 21:01:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:01:19 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:01:19 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 21:02:07 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 21:02:10 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:02:12 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 21:02:14 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 21:02:16 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:26 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:33 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:02:33 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:02:39 | INFO     | services.monitor_service:monitor_price:62 - Initial value: 75.778
+2026-04-18 21:03:37 | INFO     | services.monitor_service:monitor_price:66 - [2026-04-18 21:03:37] Value changed | Old: 75.778 | New: 75.780
+2026-04-18 21:03:43 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 21:03:47 | INFO     | services.monitor_service:monitor_price:89 - Playwright connection closed. Finishing task.
+2026-04-18 21:03:48 | INFO     | services.monitor_service:monitor_price:110 - Browser already disconnected.
+2026-04-18 21:03:48 | INFO     | services.monitor_service:monitor_price:115 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:03:48 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
+2026-04-18 21:22:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:22:59 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-18 21:22:59 | INFO     | main:lifespan:31 - Application started and ready for requests
+2026-04-18 21:23:22 | INFO     | main:xpath_websocket:58 - WebSocket: Client conected with the board.
+2026-04-18 21:23:27 | INFO     | main:xpath_websocket:66 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:23:29 | INFO     | services.selector_service:open_live_selector:73 - Navigating to the page
+2026-04-18 21:23:30 | INFO     | services.selector_service:open_live_selector:75 - Content Loaded. Waiting user's click
+2026-04-18 21:23:32 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:43 | SUCCESS  | services.selector_service:on_xpath_selected:15 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:47 | INFO     | main:start_monitoring:51 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-18 21:23:47 | INFO     | services.monitor_service:monitor_price:33 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:23:52 | INFO     | services.monitor_service:monitor_price:56 - Initial value: 75.623
+2026-04-18 21:24:21 | INFO     | services.monitor_service:monitor_price:68 - [2026-04-18 21:24:21] Value changed | Old: 75.623 | New: 75.617
+2026-04-18 21:24:28 | INFO     | main:xpath_websocket:70 - WebSocket: Client disconected.
+2026-04-18 21:24:31 | INFO     | services.monitor_service:monitor_price:86 - Playwright connection closed. Finishing task.
+2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:108 - Browser already disconnected.
+2026-04-18 21:24:36 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-18 21:24:36 | INFO     | main:lifespan:35 - Application is shutting down. Cleaning up resources...
