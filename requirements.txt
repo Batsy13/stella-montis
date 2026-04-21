@@ -4,3 +4,7 @@ pydantic
 loguru
 playwright
 requests
+# test dependencies
+pytest
+pytest-asyncio
+httpx
