@@ -30,6 +30,8 @@
 
 ---
 
+<img width="1891" height="1054" alt="image" src="https://github.com/user-attachments/assets/2aed570c-3577-4fc9-894c-842019e5291d" />
+
 ## Projeto
 
 Este projeto é um assistente de lances automatizado desenvolvido como parte do Trabalho 01 da disciplina. O sistema monitora em tempo real o preço de um item em uma página web e, ao detectar uma alteração, interage com o Google Forms — uma plataforma pública que o sistema não controla — preenchendo e submetendo o formulário com os valores antigo e novo.
