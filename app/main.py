@@ -11,6 +11,7 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from loguru import logger
 
+# Internal modules
 from services.monitor_service import monitor_price
 from services.selector_service import open_live_selector
 from core.logger_config import setup_logger
@@ -23,16 +24,33 @@ TEMPLATES_DIR = BASE_DIR / "templates"
 
 setup_logger()
 class MonitorRequest(BaseModel):
+    """Schema for starting a price monitoring task.
+    
+    Attributes:
+        url (str): The target website URL.
+        xpath (str): The CSS selector or XPath to monitor.
+    """
     url: str
     xpath: str
 
 class StopRequest(BaseModel):
+    """Schema for stopping a specific monitoring task.
+    
+    Attributes:
+        url (str): The URL identifier for the task to be cancelled.
+    """
     url: str
 
+# Dictionary to keep track of background tasks per URL
 active_tasks: Dict[str, asyncio.Task] = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    """Handles application startup and shutdown events.
+    
+    Yields:
+        None: Control back to the FastAPI framework.
+    """
     logger.info("Application started and ready for requests")
     
     yield 
@@ -43,6 +61,14 @@ app = FastAPI(title="Stella Montis - Price Monitor", lifespan=lifespan)
 
 @app.get("/", response_class=HTMLResponse)
 async def index():
+    """Serves the main frontend dashboard.
+
+    Returns:
+        str: Raw HTML content from the index.html file.
+
+    Raises:
+        HTTPException: If the template file is missing.
+    """
     template_path = TEMPLATES_DIR / "index.html"
     try:
         with open(template_path, "r", encoding="utf-8") as f:
@@ -53,6 +79,14 @@ async def index():
 
 @app.post("/start")
 async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
+    """Starts a background task to monitor a price at the given URL.
+
+    Args:
+        req (MonitorRequest): Data containing the URL and target selector.
+
+    Returns:
+        Dict[str, str]: Confirmation message.
+    """
     logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
     if req.url in active_tasks:
         active_tasks[req.url].cancel()
@@ -63,6 +97,14 @@ async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
 
 @app.post("/stop")
 async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
+    """Stops an active monitoring task.
+
+    Args:
+        req (StopRequest): Data containing the URL of the task to stop.
+
+    Returns:
+        Dict[str, str]: Status message of the operation.
+    """
     logger.info(f"Stop monitoring requested | URL: {req.url}")
     if req.url in active_tasks:
         active_tasks[req.url].cancel()
@@ -72,6 +114,14 @@ async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
 
 @app.websocket("/ws/xpath")
 async def xpath_websocket(websocket: WebSocket):
+    """Handles the WebSocket connection for the live element selector.
+
+    Allows the user to send a URL to open a browser and pick an element.
+    Selected paths are sent back through this same connection.
+
+    Args:
+        websocket (WebSocket): The active WebSocket client connection.
+    """
     await websocket.accept()
     logger.info("WebSocket: Client conected with the board.")
     

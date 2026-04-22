@@ -4,7 +4,26 @@ from loguru import logger
 from fastapi import WebSocket
 
 async def open_live_selector(url: str, websocket: WebSocket):
+    """Opens a browser instance to allow real-time XPath selection via UI.
+
+    This function injects a JavaScript agent into the page that highlights 
+    elements on hover and captures a unique CSS/XPath-like selector upon 
+    clicking. The selected path is then sent back to the server via 
+    an exposed function and forwarded to the client through a WebSocket.
+
+    Args:
+        url (str): The target website address to open and inspect.
+        websocket (WebSocket): An active FastAPI WebSocket connection to 
+            relay the selected selectors back to the frontend.
+
+    Returns:
+        None
+
+    Raises:
+        Exception: If there's a failure in browser management or page navigation.
+    """
     async with async_playwright() as p:
+        # Launching browser with headless=False is required for user interaction
         browser = await p.chromium.launch(headless=False) 
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0"
@@ -15,8 +34,10 @@ async def open_live_selector(url: str, websocket: WebSocket):
             logger.success(f"XPath: {xpath}")
             await websocket.send_json({"type": "xpath_result", "xpath": xpath})
 
+        # Bridges the Browser's window.sendToPython to this Python coroutine
         await page.expose_function("sendToPython", on_xpath_selected)
         
+        # Injection of the CSS and JS logic for element selection
         await page.add_init_script("""
             let currentSelectedElement = null;
 
@@ -74,6 +95,7 @@ async def open_live_selector(url: str, websocket: WebSocket):
             await page.goto(url, wait_until="domcontentloaded", timeout=60000)
             logger.info("Content Loaded. Waiting user's click")
             
+            # Keeps the function alive while the browser window is open
             while browser.is_connected():
                 await asyncio.sleep(1)
                 
