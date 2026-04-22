@@ -111,6 +111,14 @@ O projeto foi estruturado para cumprir os seguintes requisitos pontuáveis:
 
 5. Acesse **http://localhost:8000**, informe a URL, clique em **Sincronizar Interface de Captura**, selecione o elemento no browser que abrir e clique em **Iniciar Protocolo de Vigília**.
 
+### Testes Automatizados
+
+O projeto utiliza **pytest** para garantir a integridade das funções de monitoramento e comunicação.
+
+1. **Executar todos os testes:**
+   ```bash
+   pytest
+   ```
 ### Documentação Técnica
 
 ```bash

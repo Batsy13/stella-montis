@@ -1,10 +1,12 @@
 fastapi
 uvicorn
+uvicorn[standard]
+websockets
+wsproto
 pydantic
 loguru
 playwright
 requests
-# test dependencies
 pytest
 pytest-asyncio
 httpx

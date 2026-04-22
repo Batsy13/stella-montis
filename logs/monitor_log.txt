@@ -867,3 +867,11 @@ Call log:
 2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: connection refused
 2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
 2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 13:59:03 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 13:59:03 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 13:59:03 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 14:02:00 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 14:02:02 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 14:02:02 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 14:02:02 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 14:02:38 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
