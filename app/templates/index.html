@@ -217,6 +217,17 @@
       </div>
 
       <div class="form-group">
+        <label for="username">Operador (Nome de Usuário):</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="SEU NOME"
+          maxlength="20"
+          required
+        />
+      </div>
+
+      <div class="form-group">
         <label for="url">Coordenada de Origem (URL):</label>
         <input
           type="text"
@@ -300,13 +311,18 @@
 
       function startCapture() {
         const url = document.getElementById("url").value;
+        const username = document.getElementById("username").value;
+        if (!username) {
+          showStatus("NOME DE USUÁRIO OBRIGATÓRIO.", "error");
+          return;
+        }
         if (!url || !url.startsWith("http")) {
           showStatus("URL INVÁLIDA.", "error");
           return;
         }
 
         if (ws.readyState === WebSocket.OPEN) {
-          ws.send(JSON.stringify({ url: url }));
+          ws.send(JSON.stringify({ url: url, username: username }));
           showStatus("INTERFACE ABERTA. SELECIONE O ALVO.", "info", 10000);
         } else {
           alert("FALHA DE COMUNICAÇÃO COM O NÚCLEO.");
@@ -316,7 +332,12 @@
       async function startMonitoring() {
         const url = document.getElementById("url").value;
         const xpath = document.getElementById("xpath").value;
+        const username = document.getElementById("username").value;
 
+        if (!username) {
+          showStatus("NOME DE USUÁRIO OBRIGATÓRIO.", "error");
+          return;
+        }
         if (!url || !xpath) {
           showStatus("CAMPOS INCOMPLETOS.", "error");
           return;
@@ -326,7 +347,7 @@
           const response = await fetch("/start", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url, xpath}),
+            body: JSON.stringify({ url, xpath, username }),
           });
 
           if (response.ok) {
@@ -344,7 +365,12 @@
 
       async function stopMonitoring() {
         const url = document.getElementById("url").value;
+        const username = document.getElementById("username").value;
 
+        if (!username) {
+          showStatus("NOME DE USUÁRIO OBRIGATÓRIO.", "error");
+          return;
+        }
         if (!url) {
           showStatus("URL NECESSÁRIA PARA INTERRUPÇÃO.", "error");
           return;
@@ -354,7 +380,7 @@
           const response = await fetch("/stop", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url }),
+            body: JSON.stringify({ url, username }),
           });
 
           if (response.ok) {

@@ -29,17 +29,21 @@ class MonitorRequest(BaseModel):
     Attributes:
         url (str): The target website URL.
         xpath (str): The CSS selector or XPath to monitor.
+        username (str): The operator triggering the task.
     """
     url: str
     xpath: str
+    username: str
 
 class StopRequest(BaseModel):
     """Schema for stopping a specific monitoring task.
     
     Attributes:
         url (str): The URL identifier for the task to be cancelled.
+        username (str): The operator triggering the task.
     """
     url: str
+    username: str
 
 # Dictionary to keep track of background tasks per URL
 active_tasks: Dict[str, asyncio.Task] = {}
@@ -87,11 +91,11 @@ async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
     Returns:
         Dict[str, str]: Confirmation message.
     """
-    logger.info(f"Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
+    logger.info(f"[{req.username}] Monitoring requested | URL: {req.url} | Selector: {req.xpath}")
     if req.url in active_tasks:
         active_tasks[req.url].cancel()
     
-    task = asyncio.create_task(monitor_price(req.url, req.xpath))
+    task = asyncio.create_task(monitor_price(req.url, req.xpath, username=req.username))
     active_tasks[req.url] = task
     return {"message": "Monitoring started successfully"}
 
@@ -105,7 +109,7 @@ async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
     Returns:
         Dict[str, str]: Status message of the operation.
     """
-    logger.info(f"Stop monitoring requested | URL: {req.url}")
+    logger.info(f"[{req.username}] Stop monitoring requested | URL: {req.url}")
     if req.url in active_tasks:
         active_tasks[req.url].cancel()
         del active_tasks[req.url]
@@ -129,9 +133,10 @@ async def xpath_websocket(websocket: WebSocket):
         while True:
             data = await websocket.receive_json()
             url = data.get("url")
+            username = data.get("username", "Desconhecido")
             
             if url:
-                logger.info(f"WebSocket: Starting Live Selector to {url}")
+                logger.info(f"[{username}] WebSocket: Starting Live Selector to {url}")
                 asyncio.create_task(open_live_selector(url, websocket))
                 
     except WebSocketDisconnect:

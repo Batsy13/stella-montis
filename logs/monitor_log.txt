@@ -906,3 +906,22 @@ Call log:
 2026-04-22 15:05:56 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
 2026-04-22 15:05:58 | INFO     | main:xpath_websocket:138 - WebSocket: Client disconected.
 2026-04-22 15:05:58 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 15:49:20 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:49:20 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:49:20 | INFO     | main:lifespan:58 - Application started and ready for requests
+2026-04-22 15:49:21 | INFO     | main:xpath_websocket:130 - WebSocket: Client conected with the board.
+2026-04-22 15:49:59 | INFO     | main:xpath_websocket:143 - WebSocket: Client disconected.
+2026-04-22 15:49:59 | INFO     | main:xpath_websocket:130 - WebSocket: Client conected with the board.
+2026-04-22 15:50:10 | INFO     | main:xpath_websocket:139 - [Pedro Costa] WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:50:12 | INFO     | services.selector_service:open_live_selector:94 - Navigating to the page
+2026-04-22 15:50:13 | INFO     | services.selector_service:open_live_selector:96 - Content Loaded. Waiting user's click
+2026-04-22 15:50:17 | SUCCESS  | services.selector_service:on_xpath_selected:34 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:22 | SUCCESS  | services.selector_service:on_xpath_selected:34 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:27 | INFO     | main:start_monitoring:94 - [Pedro Costa] Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:27 | INFO     | services.monitor_service:monitor_price:60 - [Pedro Costa] Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:50:31 | INFO     | services.monitor_service:monitor_price:83 - [Pedro Costa] Initial value: 79.103
+2026-04-22 15:51:11 | INFO     | services.monitor_service:monitor_price:95 - [Pedro Costa] [2026-04-22 15:51:11] Value changed | Old: 79.103 | New: 79.130
+2026-04-22 15:51:20 | INFO     | services.monitor_service:monitor_price:95 - [Pedro Costa] [2026-04-22 15:51:20] Value changed | Old: 79.130 | New: 79.111
+2026-04-22 15:51:27 | INFO     | main:stop_monitoring:112 - [Pedro Costa] Stop monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:51:27 | INFO     | services.monitor_service:monitor_price:118 - [Pedro Costa] Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
+2026-04-22 15:51:33 | INFO     | services.monitor_service:monitor_price:140 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
