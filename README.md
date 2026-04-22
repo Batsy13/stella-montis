@@ -30,7 +30,7 @@
 
 ---
 
-<img width="1891" height="1054" alt="image" src="https://github.com/user-attachments/assets/2aed570c-3577-4fc9-894c-842019e5291d" />
+<img width="1887" height="1051" alt="image" src="https://github.com/user-attachments/assets/6f3f3356-00ac-4eab-b919-6143c93f476a" />
 
 ## Projeto
 
