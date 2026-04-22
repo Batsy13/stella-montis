@@ -34,7 +34,7 @@ class TestStartEndpoint:
         """A valid payload should return HTTP 200."""
         response = client.post(
             "/start",
-            json={"url": "http://example.com", "xpath": "div.price"},
+            json={"url": "http://example.com", "xpath": "div.price", "username": "tester"},
         )
         assert response.status_code == 200
 
@@ -42,7 +42,7 @@ class TestStartEndpoint:
         """The response body must contain a 'message' key."""
         response = client.post(
             "/start",
-            json={"url": "http://example.com", "xpath": "#preco"},
+            json={"url": "http://example.com", "xpath": "#preco", "username": "tester"},
         )
         assert "message" in response.json()
 
@@ -50,7 +50,7 @@ class TestStartEndpoint:
         """The success message should state that monitoring has started."""
         response = client.post(
             "/start",
-            json={"url": "http://example.com", "xpath": "span.valor"},
+            json={"url": "http://example.com", "xpath": "span.valor", "username": "tester"},
         )
         data = response.json()
         message = data["message"].lower()
@@ -58,12 +58,12 @@ class TestStartEndpoint:
 
     def test_missing_xpath_returns_422(self, client):
         """Payload without 'xpath' should be rejected with HTTP 422 (Unprocessable Entity)."""
-        response = client.post("/start", json={"url": "http://example.com"})
+        response = client.post("/start", json={"url": "http://example.com", "username": "tester"})
         assert response.status_code == 422
 
     def test_missing_url_returns_422(self, client):
         """Payload without 'url' should be rejected with HTTP 422."""
-        response = client.post("/start", json={"xpath": "div"})
+        response = client.post("/start", json={"xpath": "div", "username": "tester"})
         assert response.status_code == 422
 
     def test_empty_body_returns_422(self, client):
@@ -73,7 +73,7 @@ class TestStartEndpoint:
 
     def test_duplicate_start_replaces_task(self, client):
         """Starting monitoring for the same URL twice should work without error."""
-        payload = {"url": "http://dup-test.com", "xpath": "span"}
+        payload = {"url": "http://dup-test.com", "xpath": "span", "username": "tester"}
         r1 = client.post("/start", json=payload)
         r2 = client.post("/start", json=payload)
         assert r1.status_code == 200
@@ -85,12 +85,12 @@ class TestStopEndpoint:
 
     def test_stop_nonexistent_url_returns_200(self, client):
         """Stopping an unmonitored URL should return 200 with an informative message."""
-        response = client.post("/stop", json={"url": "http://nao-existe.com"})
+        response = client.post("/stop", json={"url": "http://nao-existe.com", "username": "tester"})
         assert response.status_code == 200
 
     def test_stop_nonexistent_url_message(self, client):
         """The message for a URL without active monitoring should inform the client."""
-        response = client.post("/stop", json={"url": "http://nao-existe.com"})
+        response = client.post("/stop", json={"url": "http://nao-existe.com", "username": "tester"})
         data = response.json()
         message = data["message"].lower()
         assert "no active monitoring" in message or "no active" in message
@@ -104,10 +104,10 @@ class TestStopEndpoint:
         """Starting and then stopping monitoring should complete the full lifecycle."""
         url = "http://lifecycle-test.com"
 
-        start_resp = client.post("/start", json={"url": url, "xpath": "h1"})
+        start_resp = client.post("/start", json={"url": url, "xpath": "h1", "username": "tester"})
         assert start_resp.status_code == 200
 
-        stop_resp = client.post("/stop", json={"url": url})
+        stop_resp = client.post("/stop", json={"url": url, "username": "tester"})
         assert stop_resp.status_code == 200
         stop_data = stop_resp.json()
         message = stop_data["message"].lower()
@@ -116,6 +116,6 @@ class TestStopEndpoint:
     def test_stop_removes_task_from_active(self, client):
         """After a stop request, the URL should no longer be in active_tasks."""
         url = "http://remove-task-test.com"
-        client.post("/start", json={"url": url, "xpath": "p"})
-        client.post("/stop", json={"url": url})
+        client.post("/start", json={"url": url, "xpath": "p", "username": "tester"})
+        client.post("/stop", json={"url": url, "username": "tester"})
         assert url not in main.active_tasks
