@@ -1,40 +1,37 @@
+"""Integration tests for API endpoints (app/main.py).
+
+Uses FastAPI's TestClient (synchronous) with mocked monitor_price and
+open_live_selector to avoid launching real browsers.
+
+Covers:
+- GET  /         → Serves HTML or returns 404 if template is missing.
+- POST /start    → Initiates monitoring and validates payload.
+- POST /stop     → Terminates monitoring and handles non-existent URLs.
+- Input validation via Pydantic (HTTP 422 for invalid payloads).
 """
-Testes de integração para os endpoints da API (app/main.py).
 
-Utiliza o TestClient do FastAPI (síncrono) com monitor_price e
-open_live_selector mockados, para evitar abertura de browsers.
-
-Cobre:
-- GET  /        → serve o HTML ou retorna 404 se template ausente
-- POST /start   → inicia monitoramento, valida payload
-- POST /stop    → encerra monitoramento, trata URL inexistente
-- Validação de entrada via Pydantic (HTTP 422 para payload inválido)
-"""
-
-import pytest
-import main  # importado no topo para garantir inicialização única do módulo
-
+import main
 
 class TestIndexEndpoint:
-    """Testa o endpoint raiz GET /."""
+    """Tests the root GET / endpoint."""
 
     def test_returns_html_or_404(self, client):
-        """GET / deve retornar 200 (HTML) ou 404 se o template estiver ausente."""
+        """GET / should return 200 (HTML) or 404 if the template is missing."""
         response = client.get("/")
         assert response.status_code in (200, 404)
 
     def test_200_has_html_content_type(self, client):
-        """Se o template existir, o Content-Type deve ser text/html."""
+        """If the template exists, the Content-Type must be text/html."""
         response = client.get("/")
         if response.status_code == 200:
             assert "text/html" in response.headers.get("content-type", "")
 
 
 class TestStartEndpoint:
-    """Testa o endpoint POST /start."""
+    """Tests the POST /start endpoint."""
 
     def test_valid_payload_returns_200(self, client):
-        """Payload válido deve retornar HTTP 200."""
+        """A valid payload should return HTTP 200."""
         response = client.post(
             "/start",
             json={"url": "http://example.com", "xpath": "div.price"},
@@ -42,7 +39,7 @@ class TestStartEndpoint:
         assert response.status_code == 200
 
     def test_response_contains_message_key(self, client):
-        """Corpo da resposta deve ter a chave 'message'."""
+        """The response body must contain a 'message' key."""
         response = client.post(
             "/start",
             json={"url": "http://example.com", "xpath": "#preco"},
@@ -50,31 +47,32 @@ class TestStartEndpoint:
         assert "message" in response.json()
 
     def test_success_message_text(self, client):
-        """Mensagem de sucesso deve informar que o monitoramento foi iniciado."""
+        """The success message should state that monitoring has started."""
         response = client.post(
             "/start",
             json={"url": "http://example.com", "xpath": "span.valor"},
         )
         data = response.json()
-        assert "started" in data["message"].lower() or "iniciado" in data["message"].lower()
+        message = data["message"].lower()
+        assert "started" in message or "iniciado" in message
 
     def test_missing_xpath_returns_422(self, client):
-        """Payload sem 'xpath' deve ser rejeitado com HTTP 422 (Unprocessable Entity)."""
+        """Payload without 'xpath' should be rejected with HTTP 422 (Unprocessable Entity)."""
         response = client.post("/start", json={"url": "http://example.com"})
         assert response.status_code == 422
 
     def test_missing_url_returns_422(self, client):
-        """Payload sem 'url' deve ser rejeitado com HTTP 422."""
+        """Payload without 'url' should be rejected with HTTP 422."""
         response = client.post("/start", json={"xpath": "div"})
         assert response.status_code == 422
 
     def test_empty_body_returns_422(self, client):
-        """Body vazio deve ser rejeitado com HTTP 422."""
+        """An empty body should be rejected with HTTP 422."""
         response = client.post("/start", json={})
         assert response.status_code == 422
 
     def test_duplicate_start_replaces_task(self, client):
-        """Iniciar monitoramento da mesma URL duas vezes deve funcionar sem erro."""
+        """Starting monitoring for the same URL twice should work without error."""
         payload = {"url": "http://dup-test.com", "xpath": "span"}
         r1 = client.post("/start", json=payload)
         r2 = client.post("/start", json=payload)
@@ -83,26 +81,27 @@ class TestStartEndpoint:
 
 
 class TestStopEndpoint:
-    """Testa o endpoint POST /stop."""
+    """Tests the POST /stop endpoint."""
 
     def test_stop_nonexistent_url_returns_200(self, client):
-        """Parar URL não monitorada deve retornar 200 com mensagem informativa."""
+        """Stopping an unmonitored URL should return 200 with an informative message."""
         response = client.post("/stop", json={"url": "http://nao-existe.com"})
         assert response.status_code == 200
 
     def test_stop_nonexistent_url_message(self, client):
-        """Mensagem para URL sem monitoramento ativo deve comunicar isso ao cliente."""
+        """The message for a URL without active monitoring should inform the client."""
         response = client.post("/stop", json={"url": "http://nao-existe.com"})
         data = response.json()
-        assert "No active monitoring" in data["message"] or "no active" in data["message"].lower()
+        message = data["message"].lower()
+        assert "no active monitoring" in message or "no active" in message
 
     def test_stop_missing_url_returns_422(self, client):
-        """Payload sem 'url' deve ser rejeitado com HTTP 422."""
+        """Payload without 'url' should be rejected with HTTP 422."""
         response = client.post("/stop", json={})
         assert response.status_code == 422
 
     def test_start_then_stop_lifecycle(self, client):
-        """Iniciar e depois parar o monitoramento deve percorrer o ciclo completo."""
+        """Starting and then stopping monitoring should complete the full lifecycle."""
         url = "http://lifecycle-test.com"
 
         start_resp = client.post("/start", json={"url": url, "xpath": "h1"})
@@ -111,10 +110,11 @@ class TestStopEndpoint:
         stop_resp = client.post("/stop", json={"url": url})
         assert stop_resp.status_code == 200
         stop_data = stop_resp.json()
-        assert "stopped" in stop_data["message"].lower() or "encerrado" in stop_data["message"].lower()
+        message = stop_data["message"].lower()
+        assert "stopped" in message or "encerrado" in message
 
     def test_stop_removes_task_from_active(self, client):
-        """Após o stop, a URL não deve mais estar em active_tasks."""
+        """After a stop request, the URL should no longer be in active_tasks."""
         url = "http://remove-task-test.com"
         client.post("/start", json={"url": url, "xpath": "p"})
         client.post("/stop", json={"url": url})

@@ -1,8 +1,7 @@
-"""
-Configurações e fixtures compartilhadas para a suite de testes.
+"""Shared configurations and fixtures for the test suite.
 
-Fixtures definidas aqui ficam disponíveis para todos os módulos de teste
-automaticamente pelo pytest (sem necessidade de import explícito).
+Fixtures defined here are automatically available to all test modules
+via pytest without requiring explicit imports.
 """
 
 import pytest
@@ -12,19 +11,21 @@ from fastapi.testclient import TestClient
 
 @pytest.fixture
 def client():
-    """
-    Retorna um TestClient do FastAPI com as dependências de browser mockadas.
+    """Returns a FastAPI TestClient with mocked browser dependencies.
 
-    O monitor_price e o open_live_selector são substituídos por AsyncMocks
-    para que nenhum browser Chromium real seja aberto durante os testes.
-    O dicionário active_tasks é limpo antes e depois de cada teste para
-    garantir isolamento entre os casos.
+    The monitor_price and open_live_selector functions are replaced with
+    AsyncMocks to prevent real Chromium instances from launching during tests.
+    The active_tasks dictionary is cleared before and after each test to 
+    ensure isolation between test cases.
+
+    Yields:
+        TestClient: An instance of the FastAPI test client.
     """
     with (
         patch("main.monitor_price", new_callable=AsyncMock),
         patch("main.open_live_selector", new_callable=AsyncMock),
     ):
-        import main  # noqa: PLC0415 — importado aqui para capturar os patches
+        import main 
 
         main.active_tasks.clear()
         with TestClient(main.app) as test_client:

@@ -1,19 +1,17 @@
+"""Unit tests for services/monitor_service.py.
+
+Focuses on the send_google_form function, which is a pure function (no Playwright)
+and fully testable via requests.post mocking.
+
+Covers:
+- HTTP calls to the correct Google Forms URL.
+- Submission of the correct field (entry.1608177186) with the provided value.
+- Graceful handling of network errors (no crashes).
+- Edge cases: empty messages, multiline messages.
 """
-Testes unitários para services/monitor_service.py.
 
-Foca na função send_google_form, que é pura (sem Playwright) e
-totalmente testável via mock de requests.post.
-
-Cobre:
-- Chamada HTTP para a URL correta do Google Forms
-- Envio do campo correto (entry.1608177186) com o valor passado
-- Tratamento gracioso de erros de rede (sem crash)
-- Casos de borda: mensagem vazia, mensagem multilinha
-"""
-
-import pytest
 import requests
-from unittest.mock import patch, MagicMock, call
+from unittest.mock import patch
 
 from services.monitor_service import send_google_form
 
@@ -25,54 +23,55 @@ FORM_ENTRY = "entry.1608177186"
 
 
 class TestSendGoogleForm:
-    """Testa o envio de notificações via Google Forms."""
+    """Tests notification delivery via Google Forms."""
 
     def test_calls_post_once(self):
-        """Deve realizar exatamente uma chamada POST."""
+        """Should perform exactly one POST call."""
         with patch("services.monitor_service.requests.post") as mock_post:
-            send_google_form("mensagem de teste")
+            send_google_form("test message")
             assert mock_post.call_count == 1
 
     def test_calls_correct_url(self):
-        """A URL de destino deve ser o endpoint de resposta do Google Forms."""
+        """The target URL must be the Google Forms response endpoint."""
         with patch("services.monitor_service.requests.post") as mock_post:
-            send_google_form("mensagem de teste")
+            send_google_form("test message")
             args, _ = mock_post.call_args
             assert args[0] == FORM_URL
 
     def test_sends_message_in_correct_field(self):
-        """O campo entry.1608177186 deve conter exatamente o texto enviado."""
+        """The entry.1608177186 field must contain exactly the sent text."""
         with patch("services.monitor_service.requests.post") as mock_post:
-            send_google_form("Valor alterado: R$ 100 -> R$ 200")
+            message = "Price changed: R$ 100 -> R$ 200"
+            send_google_form(message)
             _, kwargs = mock_post.call_args
-            assert kwargs["data"][FORM_ENTRY] == "Valor alterado: R$ 100 -> R$ 200"
+            assert kwargs["data"][FORM_ENTRY] == message
 
     def test_handles_generic_exception_without_raising(self):
-        """Uma exceção genérica de rede não deve propagar (tratada internamente)."""
+        """A generic network exception should not propagate (handled internally)."""
         with patch(
             "services.monitor_service.requests.post",
-            side_effect=Exception("conexão recusada"),
+            side_effect=Exception("connection refused"),
         ):
-            send_google_form("teste")  # não deve lançar
+            send_google_form("test")  # Should not raise
 
     def test_handles_connection_error_without_raising(self):
-        """Um ConnectionError do requests não deve derrubar a aplicação."""
+        """A requests ConnectionError should not crash the application."""
         with patch(
             "services.monitor_service.requests.post",
             side_effect=requests.exceptions.ConnectionError("timeout"),
         ):
-            send_google_form("teste")  # não deve lançar
+            send_google_form("test")  # Should not raise
 
     def test_handles_timeout_without_raising(self):
-        """Um Timeout do requests não deve derrubar a aplicação."""
+        """A requests Timeout should not crash the application."""
         with patch(
             "services.monitor_service.requests.post",
             side_effect=requests.exceptions.Timeout("timeout"),
         ):
-            send_google_form("teste")
+            send_google_form("test")
 
     def test_empty_message_still_calls_post(self):
-        """Mensagem vazia deve ser enviada normalmente (sem short-circuit)."""
+        """An empty message should be sent normally without short-circuiting."""
         with patch("services.monitor_service.requests.post") as mock_post:
             send_google_form("")
             assert mock_post.call_count == 1
@@ -80,15 +79,15 @@ class TestSendGoogleForm:
             assert kwargs["data"][FORM_ENTRY] == ""
 
     def test_multiline_message_preserved(self):
-        """Mensagem com quebras de linha deve chegar intacta ao formulário."""
-        msg = "Valor alterado!\n\nURL: http://example.com\nAntigo: R$ 10\nNovo: R$ 20"
+        """Messages with line breaks should arrive intact at the form."""
+        msg = "Price changed!\n\nURL: http://example.com\nOld: R$ 10\nNew: R$ 20"
         with patch("services.monitor_service.requests.post") as mock_post:
             send_google_form(msg)
             _, kwargs = mock_post.call_args
             assert kwargs["data"][FORM_ENTRY] == msg
 
     def test_special_characters_in_message(self):
-        """Caracteres especiais (acentos, símbolos) devem ser enviados sem erro."""
+        """Special characters (accents, symbols) should be sent without error."""
         msg = "Preço: R$ 1.234,56 — alterado às 14h30 (São Paulo)"
         with patch("services.monitor_service.requests.post") as mock_post:
             send_google_form(msg)
