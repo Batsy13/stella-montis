@@ -31,7 +31,16 @@ main ─────────────────────────
                feat: remove email and integrate Google Forms automation
                fix: remove env and improve forms logic
                Merge branch 'feat/send-email' into dev
-               feat: add stop monitoring functionality + task management + UI toggle  ◄ HEAD
+               feat: add stop monitoring functionality + task management + UI toggle
+               docs: add MkDocs documentation and update README
+               feat: adiciona suite de testes pytest (30 casos)
+               docs: refactor docstrings to english
+               ci: add github actions workflow for automated testing
+               ci: fix versions
+               docs: add Google-style docstrings and improve PEP 8 compliance
+               feat: update WebSocket URL logic
+               feat: add username field to monitoring requests and include operator identity in logs
+               test: add username field to API request payloads  ◄ HEAD
 ```
 
 ---
@@ -134,6 +143,30 @@ Substituiu o serviço de e-mail pelo **Google Forms**:
 - Frontend: botão "Interromper Protocolo" com toggle start/stop
 - Permite encerrar monitoramento sem reiniciar a aplicação
 
+#### `feat: adiciona suite de testes pytest (30 casos)`
+
+- Criação de `app/tests/` com `conftest.py`, `test_main.py`, `test_monitor_service.py`, `test_logger_config.py`
+- Mocking de `monitor_price` e `open_live_selector` via `unittest.mock.AsyncMock`
+- Testes cobrem: endpoints REST, validação Pydantic, ciclo de vida das tasks, `send_google_form`, `setup_logger`
+
+#### `ci: add github actions workflow for automated testing`
+
+- Workflow `.github/workflows/` para rodar `pytest` em CI
+- Executa automaticamente a cada push e pull request
+
+#### `docs: add Google-style docstrings and improve PEP 8 compliance`
+
+- Docstrings no estilo Google adicionadas a todas as funções e classes
+- Conformidade com PEP 8 aplicada em todo o código
+
+#### `feat: add username field to monitoring requests and include operator identity in logs`
+
+- Campo `username: str` adicionado a `MonitorRequest` e `StopRequest`
+- `monitor_price()` recebe `username` como parâmetro (padrão `"Anônimo"`)
+- Logs agora incluem `[username]` para rastreabilidade do operador
+- Mensagens do Google Forms incluem o nome do operador
+- WebSocket handler lê `username` da mensagem recebida
+
 ---
 
 ## Linha do Tempo Consolidada
@@ -154,7 +187,17 @@ Abr 15     d3dd75d   dev             highlight azul persistente no selector
 Abr 15     87487cb   dev             Live Selector + Google Forms (remove email)
 Abr 15     c83fcac   dev             remove .env, melhora lógica de forms
 Abr 15     484ffcb   dev             merge feat/send-email
-Abr 15     54f58da   dev             stop monitoring + task management + UI toggle  ◄ HEAD
+Abr 15     54f58da   dev             stop monitoring + task management + UI toggle
+Abr 15     3501dcb   dev             docs: MkDocs + README
+Abr 15     8bfd88e   dev             feat: suite de testes pytest (30 casos)
+Abr 15     7db54d0   dev             docs: docstrings refatoradas para inglês
+Abr 15     477f10b   dev             ci: github actions workflow
+Abr 15     00fa077   dev             ci: fix versions
+Abr 15     b681aaf   dev             docs: docstrings Google-style + PEP 8
+Abr 22     781dcd6   dev             feat: update WebSocket URL logic
+Abr 22     34ee422   dev             feat: username em requests + logs com identidade do operador
+Abr 22     74953e9   main            Update image in README.md
+Abr 22     b899298   dev             test: username nos payloads dos testes  ◄ HEAD
 ```
 
 ---
@@ -170,3 +213,6 @@ Abr 15     54f58da   dev             stop monitoring + task management + UI togg
 | Stop monitoring | Sem suporte | `POST /stop` + `active_tasks` |
 | Comunicação frontend | HTTP REST + postMessage (iframe) | HTTP REST + WebSocket |
 | Estrutura | Arquivos na raiz | Módulos em `app/core/`, `app/services/` |
+| Rastreabilidade | Sem identificação de operador | Campo `username` em todos os requests e logs |
+| Testes | Sem cobertura | Suite pytest com 30 casos (unit + integração) |
+| CI | Sem pipeline | GitHub Actions: pytest automático em cada push/PR |

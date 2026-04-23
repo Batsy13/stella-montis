@@ -51,5 +51,6 @@ nav:
     - selector_service.py: modulos/selector_service.md
     - logger_config.py: modulos/logger_config.md
     - Interface Web: modulos/interface.md
+    - Testes: modulos/tests.md
   - Análise Big O: big-o.md
   - Histórico de Branches: branches.md
