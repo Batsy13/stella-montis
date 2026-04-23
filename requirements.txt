@@ -1,6 +1,12 @@
 fastapi
 uvicorn
+uvicorn[standard]
+websockets
+wsproto
 pydantic
 loguru
 playwright
 requests
+pytest
+pytest-asyncio
+httpx

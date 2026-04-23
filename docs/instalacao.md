@@ -42,10 +42,16 @@ pip install -r requirements.txt
 |---|---|
 | `fastapi` | Framework web ASGI com suporte nativo a WebSocket |
 | `uvicorn` | Servidor ASGI |
-| `playwright` | Automação de browser (Live Selector + monitoramento) |
-| `loguru` | Logging estruturado |
+| `uvicorn[standard]` | Instalação do Uvicorn com dependências extras de performance |
+| `websockets` | Implementação de protocolo para comunicação bidirecional |
+| `wsproto` | Parser de protocolo WebSocket para conformidade técnica |
 | `pydantic` | Validação de dados nos modelos FastAPI |
+| `loguru` | Logging estruturado |
+| `playwright` | Automação de browser (Live Selector + monitoramento) |
 | `requests` | Envio de notificações via HTTP POST ao Google Forms |
+| `pytest` | Framework para criação e execução de testes automatizados |
+| `pytest-asyncio` | Suporte a testes assíncronos para coroutines do Python |
+| `httpx` | Cliente HTTP assíncrono para testes de integração de API |
 
 Após instalar o playwright, baixe o browser:
 
@@ -101,16 +107,21 @@ mkdocs build
 stella-montis/
 ├── app/
 │   ├── core/
-│   │   └── logger_config.py      # Configuração do Loguru
+│   │   └── logger_config.py        # Configuração do Loguru
 │   ├── services/
-│   │   ├── monitor_service.py    # Loop de monitoramento + notificação Google Forms
-│   │   └── selector_service.py   # Live Selector via Playwright + WebSocket
+│   │   ├── monitor_service.py      # Loop de monitoramento + notificação Google Forms
+│   │   └── selector_service.py     # Live Selector via Playwright + WebSocket
 │   ├── templates/
-│   │   └── index.html            # Interface web (WebSocket client)
-│   └── main.py                   # Entrada da aplicação (FastAPI + WebSocket)
+│   │   └── index.html              # Interface web (WebSocket client)
+|   ├── tests/
+│   │   └── conftest.py             # Gerencia fixtures globais e configurações do loop de eventos assíncronos para o ambiente de teste.
+|   |   └── test_logger_config.py   # Valida a criação de diretórios, escrita de arquivos e o padrão de formatação dos logs.
+|   |   └── test_main.py            # Testa os endpoints da API, o gerenciamento de tarefas ativas e a integridade das rotas /start e /stop.
+|   |   └── test_monitor_service.py # Verifica a lógica de detecção de mudanças de preço e o tratamento de exceções no polling.
+│   └── main.py                     # Entrada da aplicação (FastAPI + WebSocket)
 ├── logs/
-│   └── monitor_log.txt           # Arquivo de log gerado em runtime
-├── docs/                         # Documentação MkDocs
+│   └── monitor_log.txt             # Arquivo de log gerado em runtime
+├── docs/                           # Documentação MkDocs
 ├── requirements.txt
 ├── mkdocs.yml
 └── README.md

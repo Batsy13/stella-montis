@@ -5,6 +5,14 @@ from playwright.async_api import async_playwright
 from loguru import logger
 
 def send_google_form(message):
+    """Sends a notification message to a Google Form via HTTP POST.
+
+    Args:
+        message (str): The content to be sent to the form field.
+
+    Returns:
+        None
+    """
     try:
         url = "https://docs.google.com/forms/d/e/1FAIpQLScYm5JlmnR1F2THqf00mKa3C71hgAVa2HLbIg84-88rw74ySw/formResponse"
         data = {
@@ -12,9 +20,17 @@ def send_google_form(message):
         }
         requests.post(url, data=data)
     except Exception as e:
-        logger.error(f"Erro ao enviar formulário: {e}")
+        logger.error(f"Error sending form: {e}")
 
 async def show_visual_form(message):
+    """Opens a browser to visually fill and submit a Google Form.
+
+    Args:
+        message (str): The text message to input into the form's textarea.
+
+    Returns:
+        None
+    """
     try:
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=False)
@@ -27,10 +43,21 @@ async def show_visual_form(message):
             await page.wait_for_timeout(3000)
             await browser.close()
     except Exception as e:
-        logger.error(f"Erro no formulário visual: {e}")
+        logger.error(f"Error in visual form: {e}")
 
-async def monitor_price(url: str, selector: str, interval: int = 10):
-    logger.info(f"Starting persistent monitoring | URL: {url}")
+async def monitor_price(url: str, selector: str, interval: int = 10, username: str = "Anônimo"):
+    """Monitors a specific web element for text changes over time.
+
+    Args:
+        url (str): The destination URL to monitor.
+        selector (str): The CSS selector or XPath of the element to watch.
+        interval (int): Time in seconds between each check. Defaults to 10.
+        username (str): The operator who triggered the task.
+
+    Returns:
+        None
+    """
+    logger.info(f"[{username}] Starting persistent monitoring | URL: {url}")
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False) 
@@ -53,10 +80,10 @@ async def monitor_price(url: str, selector: str, interval: int = 10):
                         if current_value:
                             if last_value is None:
                                 last_value = current_value
-                                logger.info(f"Initial value: {current_value}")
+                                logger.info(f"[{username}] Initial value: {current_value}")
                                 
                                 start_msg = (
-                                    f"Monitoramento Iniciado\n\n"
+                                    f"Monitoramento Iniciado por {username}\n\n"
                                     f"URL: {url}\n"
                                     f"Valor inicial: {current_value}\n"
                                     f"Data: {now}"
@@ -64,7 +91,7 @@ async def monitor_price(url: str, selector: str, interval: int = 10):
                                 asyncio.create_task(show_visual_form(start_msg))
                             
                             elif current_value != last_value:
-                                log_msg = f"[{now}] Value changed | Old: {last_value} | New: {current_value}"
+                                log_msg = f"[{username}] [{now}] Value changed | Old: {last_value} | New: {current_value}"
                                 logger.info(log_msg)
 
                                 message = (
@@ -88,13 +115,13 @@ async def monitor_price(url: str, selector: str, interval: int = 10):
                     raise e 
                 
         except asyncio.CancelledError:
-            logger.info(f"Monitoring task for {url} was cancelled by user/system.")
+            logger.info(f"[{username}] Monitoring task for {url} was cancelled by user/system.")
         except Exception as e:
             logger.error(f"Unexpected monitoring error: {e}")
         finally:
             end_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             end_msg = (
-                f"Monitoramento Finalizado\n\n"
+                f"Monitoramento Finalizado ({username})\n\n"
                 f"O monitoramento para a URL {url} foi encerrado às {end_time}."
             )
             

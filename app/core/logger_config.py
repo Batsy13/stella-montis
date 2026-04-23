@@ -4,6 +4,22 @@ from pathlib import Path
 from loguru import logger
 
 def setup_logger(log_level: str = "INFO") -> None:
+    """Configures the loguru logger for console and file output.
+
+    This function removes the default handler, creates a 'logs' directory 
+    at the project root level, and sets up two new handlers: one for 
+    standard output (stdout) and another for a rotating log file.
+
+    Args:
+        log_level (str): The severity level for the logs (e.g., "DEBUG", 
+            "INFO", "WARNING"). Defaults to "INFO".
+
+    Returns:
+        None
+
+    Example:
+        >>> setup_logger("DEBUG")
+    """
 
     logger.remove()
 
@@ -21,6 +37,7 @@ def setup_logger(log_level: str = "INFO") -> None:
         "<level>{message}</level>"
     )
 
+    # Console handler
     logger.add(
         sys.stdout,
         level=log_level,
@@ -28,6 +45,7 @@ def setup_logger(log_level: str = "INFO") -> None:
         colorize=True
     )
 
+    # File handler with rotation
     logger.add(
         log_file_path,
         level=log_level,

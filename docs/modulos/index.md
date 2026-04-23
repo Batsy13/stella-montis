@@ -9,6 +9,7 @@ O projeto é organizado em módulos Python com responsabilidades bem definidas:
 | [selector_service.py](selector_service.md) | `app/services/selector_service.py` | Live Selector: abre browser real, captura CSS selector via WebSocket |
 | [logger_config.py](logger_config.md) | `app/core/logger_config.py` | Configuração do Loguru (stdout + arquivo) |
 | [Interface Web](interface.md) | `app/templates/index.html` | Frontend: WebSocket client, start/stop, exibição do selector |
+| [Testes](tests.md) | `app/tests/` | Suite pytest: integração de endpoints + unitários de serviços |
 
 ---
 

@@ -717,3 +717,211 @@ Call log:
 2026-04-18 23:44:37 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/
 2026-04-18 23:44:37 | INFO     | services.monitor_service:monitor_price:91 - Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
 2026-04-18 23:44:44 | INFO     | services.monitor_service:monitor_price:113 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 11:26:53 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: div.price
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: #preco
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: span.valor
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://lifecycle-test.com | Selector: h1
+2026-04-22 11:26:54 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://lifecycle-test.com
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:26:54 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://remove-task-test.com | Selector: p
+2026-04-22 11:26:54 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://remove-task-test.com
+2026-04-22 11:26:54 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:26:54 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: conexão recusada
+2026-04-22 11:26:54 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 11:26:54 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: div.price
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: #preco
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: span.valor
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://lifecycle-test.com | Selector: h1
+2026-04-22 11:27:04 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://lifecycle-test.com
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:27:04 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://remove-task-test.com | Selector: p
+2026-04-22 11:27:04 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://remove-task-test.com
+2026-04-22 11:27:04 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:27:04 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: conexão recusada
+2026-04-22 11:27:04 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 11:27:04 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: DEBUG
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | core.logger_config:setup_logger:40 - Logger configurado com nível: INFO
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: div.price
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: #preco
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://example.com | Selector: span.valor
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://dup-test.com | Selector: span
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://nao-existe.com
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://lifecycle-test.com | Selector: h1
+2026-04-22 11:29:46 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://lifecycle-test.com
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | INFO     | main:lifespan:36 - Application started and ready for requests
+2026-04-22 11:29:46 | INFO     | main:start_monitoring:56 - Monitoring requested | URL: http://remove-task-test.com | Selector: p
+2026-04-22 11:29:46 | INFO     | main:stop_monitoring:66 - Stop monitoring requested | URL: http://remove-task-test.com
+2026-04-22 11:29:46 | INFO     | main:lifespan:40 - Application is shutting down. Cleaning up resources...
+2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: connection refused
+2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 11:29:46 | ERROR    | services.monitor_service:send_google_form:15 - Erro ao enviar formulário: timeout
+2026-04-22 13:59:03 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 13:59:03 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 13:59:03 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 14:02:00 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 14:02:02 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 14:02:02 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 14:02:02 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 14:02:38 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
+2026-04-22 14:24:11 | INFO     | main:xpath_websocket:134 - WebSocket: Starting Live Selector to https://www.mercadobitcoin.com.br/criptomoedas/bitcoin
+2026-04-22 14:24:12 | INFO     | services.selector_service:open_live_selector:94 - Navigating to the page
+2026-04-22 14:24:13 | INFO     | services.selector_service:open_live_selector:96 - Content Loaded. Waiting user's click
+2026-04-22 14:25:22 | INFO     | main:xpath_websocket:134 - WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 14:25:23 | INFO     | services.selector_service:open_live_selector:94 - Navigating to the page
+2026-04-22 14:25:25 | INFO     | services.selector_service:open_live_selector:96 - Content Loaded. Waiting user's click
+2026-04-22 14:25:27 | SUCCESS  | services.selector_service:on_xpath_selected:34 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 14:25:35 | INFO     | main:start_monitoring:90 - Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 14:25:35 | INFO     | services.monitor_service:monitor_price:59 - Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 14:25:40 | INFO     | services.monitor_service:monitor_price:82 - Initial value: 78.741
+2026-04-22 14:25:50 | INFO     | services.monitor_service:monitor_price:94 - [2026-04-22 14:25:50] Value changed | Old: 78.741 | New: 73
+2026-04-22 14:26:00 | INFO     | services.monitor_service:monitor_price:94 - [2026-04-22 14:26:00] Value changed | Old: 73 | New: 93
+2026-04-22 14:26:02 | INFO     | main:xpath_websocket:138 - WebSocket: Client disconected.
+2026-04-22 14:26:02 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 14:26:02 | INFO     | services.monitor_service:monitor_price:117 - Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
+2026-04-22 14:26:08 | INFO     | services.monitor_service:monitor_price:134 - Browser already disconnected.
+2026-04-22 14:26:08 | INFO     | services.monitor_service:monitor_price:139 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:05:11 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:05:12 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:05:12 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 15:05:23 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
+2026-04-22 15:05:50 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
+2026-04-22 15:05:51 | INFO     | main:xpath_websocket:138 - WebSocket: Client disconected.
+2026-04-22 15:05:52 | INFO     | main:xpath_websocket:138 - WebSocket: Client disconected.
+2026-04-22 15:05:53 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 15:05:54 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:05:54 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:05:54 | INFO     | main:lifespan:54 - Application started and ready for requests
+2026-04-22 15:05:56 | INFO     | main:xpath_websocket:126 - WebSocket: Client conected with the board.
+2026-04-22 15:05:58 | INFO     | main:xpath_websocket:138 - WebSocket: Client disconected.
+2026-04-22 15:05:58 | INFO     | main:lifespan:58 - Application is shutting down. Cleaning up resources...
+2026-04-22 15:49:20 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:49:20 | INFO     | core.logger_config:setup_logger:58 - Logger configurado com nível: INFO
+2026-04-22 15:49:20 | INFO     | main:lifespan:58 - Application started and ready for requests
+2026-04-22 15:49:21 | INFO     | main:xpath_websocket:130 - WebSocket: Client conected with the board.
+2026-04-22 15:49:59 | INFO     | main:xpath_websocket:143 - WebSocket: Client disconected.
+2026-04-22 15:49:59 | INFO     | main:xpath_websocket:130 - WebSocket: Client conected with the board.
+2026-04-22 15:50:10 | INFO     | main:xpath_websocket:139 - [Pedro Costa] WebSocket: Starting Live Selector to https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:50:12 | INFO     | services.selector_service:open_live_selector:94 - Navigating to the page
+2026-04-22 15:50:13 | INFO     | services.selector_service:open_live_selector:96 - Content Loaded. Waiting user's click
+2026-04-22 15:50:17 | SUCCESS  | services.selector_service:on_xpath_selected:34 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:22 | SUCCESS  | services.selector_service:on_xpath_selected:34 - XPath: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:27 | INFO     | main:start_monitoring:94 - [Pedro Costa] Monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/ | Selector: #js-category-content > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+2026-04-22 15:50:27 | INFO     | services.monitor_service:monitor_price:60 - [Pedro Costa] Starting persistent monitoring | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:50:31 | INFO     | services.monitor_service:monitor_price:83 - [Pedro Costa] Initial value: 79.103
+2026-04-22 15:51:11 | INFO     | services.monitor_service:monitor_price:95 - [Pedro Costa] [2026-04-22 15:51:11] Value changed | Old: 79.103 | New: 79.130
+2026-04-22 15:51:20 | INFO     | services.monitor_service:monitor_price:95 - [Pedro Costa] [2026-04-22 15:51:20] Value changed | Old: 79.130 | New: 79.111
+2026-04-22 15:51:27 | INFO     | main:stop_monitoring:112 - [Pedro Costa] Stop monitoring requested | URL: https://br.tradingview.com/symbols/BTCUSD/
+2026-04-22 15:51:27 | INFO     | services.monitor_service:monitor_price:118 - [Pedro Costa] Monitoring task for https://br.tradingview.com/symbols/BTCUSD/ was cancelled by user/system.
+2026-04-22 15:51:33 | INFO     | services.monitor_service:monitor_price:140 - Resource cleanup finished for https://br.tradingview.com/symbols/BTCUSD/

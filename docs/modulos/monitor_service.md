@@ -147,7 +147,7 @@ async def show_visual_form(message):
 
 ---
 
-### `monitor_price(url, selector, interval=10)`
+### `monitor_price(url, selector, interval=10, username="Anônimo")`
 
 Loop principal de monitoramento.
 
@@ -156,6 +156,7 @@ Loop principal de monitoramento.
 | `url` | `str` | — | URL da página a monitorar |
 | `selector` | `str` | — | CSS selector do elemento |
 | `interval` | `int` | `10` | Intervalo em segundos entre verificações |
+| `username` | `str` | `"Anônimo"` | Nome do operador que iniciou o monitoramento |
 
 ---
 
@@ -164,7 +165,7 @@ Loop principal de monitoramento.
 ### Monitoramento Iniciado
 
 ```
-Monitoramento Iniciado
+Monitoramento Iniciado por amanda
 
 URL: https://site.com
 Valor inicial: $74,228.31
@@ -176,6 +177,7 @@ Data: 2026-04-15 10:00:00
 ```
 Valor alterado!
 
+O valor monitorado foi alterado.
 URL: https://site.com
 Data: 2026-04-15 10:05:32
 
@@ -186,7 +188,7 @@ Novo valor: $74,231.83
 ### Monitoramento Finalizado
 
 ```
-Monitoramento Finalizado
+Monitoramento Finalizado (amanda)
 
 O monitoramento para a URL https://site.com foi encerrado às 2026-04-15 10:30:00.
 ```

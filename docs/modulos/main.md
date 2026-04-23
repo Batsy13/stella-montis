@@ -52,12 +52,14 @@ active_tasks: Dict[str, asyncio.Task] = {}
 |---|---|---|
 | `url` | `str` | URL da página a ser monitorada |
 | `xpath` | `str` | CSS selector do elemento (gerado pelo Live Selector) |
+| `username` | `str` | Nome do operador que disparou a tarefa |
 
 ### `StopRequest` — usado em `POST /stop`
 
 | Campo | Tipo | Descrição |
 |---|---|---|
 | `url` | `str` | URL cujo monitoramento deve ser encerrado |
+| `username` | `str` | Nome do operador que solicitou a parada |
 
 ---
 
@@ -124,7 +126,7 @@ async def start_monitoring(req: MonitorRequest) -> Dict[str, str]:
 
 **Body:**
 ```json
-{ "url": "https://site.com/produto", "xpath": "#preco > span:nth-of-type(1)" }
+{ "url": "https://site.com/produto", "xpath": "#preco > span:nth-of-type(1)", "username": "amanda" }
 ```
 
 **Resposta:**
@@ -150,14 +152,14 @@ async def stop_monitoring(req: StopRequest) -> Dict[str, str]:
 
 **Body:**
 ```json
-{ "url": "https://site.com/produto" }
+{ "url": "https://site.com/produto", "username": "amanda" }
 ```
 
 ---
 
 ### `WebSocket /ws/xpath`
 
-Canal de comunicação para o Live Selector. Recebe uma URL, dispara `open_live_selector()` e retorna o CSS selector capturado.
+Canal de comunicação para o Live Selector. Recebe uma URL e o nome do operador, dispara `open_live_selector()` e retorna o CSS selector capturado.
 
 ```python
 @app.websocket("/ws/xpath")
@@ -167,7 +169,9 @@ async def xpath_websocket(websocket: WebSocket):
         while True:
             data = await websocket.receive_json()
             url = data.get("url")
+            username = data.get("username", "Desconhecido")
             if url:
+                logger.info(f"[{username}] WebSocket: Starting Live Selector to {url}")
                 asyncio.create_task(open_live_selector(url, websocket))
     except WebSocketDisconnect:
         logger.info("WebSocket: Client disconnected.")
@@ -177,7 +181,7 @@ async def xpath_websocket(websocket: WebSocket):
 
 **Mensagem recebida:**
 ```json
-{ "url": "https://site.com" }
+{ "url": "https://site.com", "username": "amanda" }
 ```
 
 **Mensagem enviada ao receber o selector:**

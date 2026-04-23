@@ -30,6 +30,8 @@
 
 ---
 
+<img width="1887" height="1051" alt="image" src="https://github.com/user-attachments/assets/6f3f3356-00ac-4eab-b919-6143c93f476a" />
+
 ## Projeto
 
 Este projeto é um assistente de lances automatizado desenvolvido como parte do Trabalho 01 da disciplina. O sistema monitora em tempo real o preço de um item em uma página web e, ao detectar uma alteração, interage com o Google Forms — uma plataforma pública que o sistema não controla — preenchendo e submetendo o formulário com os valores antigo e novo.
@@ -111,6 +113,14 @@ O projeto foi estruturado para cumprir os seguintes requisitos pontuáveis:
 
 5. Acesse **http://localhost:8000**, informe a URL, clique em **Sincronizar Interface de Captura**, selecione o elemento no browser que abrir e clique em **Iniciar Protocolo de Vigília**.
 
+### Testes Automatizados
+
+O projeto utiliza **pytest** para garantir a integridade das funções de monitoramento e comunicação.
+
+1. **Executar todos os testes:**
+   ```bash
+   pytest
+   ```
 ### Documentação Técnica
 
 ```bash
